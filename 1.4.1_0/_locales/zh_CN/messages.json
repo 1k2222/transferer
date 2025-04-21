@@ -1,0 +1,236 @@
+{
+   "add_group": {
+      "message": "添加分组"
+   },
+   "add_source_map": {
+      "message": "添加 Source Map"
+   },
+   "advanced": {
+      "message": "高级"
+   },
+   "backup_item_quota_error": {
+      "message": "规则数量超过备份存储限制（8192 字节），无法创建备份"
+   },
+   "backup_no_enabled": {
+      "message": "备份未启用，可在设置中开启"
+   },
+   "backup_same_ignore": {
+      "message": "备份内容未发生变化"
+   },
+   "backup_success": {
+      "message": "备份成功"
+   },
+   "backup_tips_auto_description": {
+      "message": "每次规则内容变化后，Camora 都会尝试自动备份（备份间隔 3 分钟）。"
+   },
+   "backup_tips_auto_title": {
+      "message": "🕥 自动备份"
+   },
+   "backup_tips_manual_description": {
+      "message": "你也可以点击按钮手动备份。"
+   },
+   "backup_tips_manual_title": {
+      "message": "🔨 手动备份"
+   },
+   "backup_tips_note_description_1": {
+      "message": "1. 备份异步同步到 Chrome 云端，受存储容量上限或网络环境影响可能会失败。"
+   },
+   "backup_tips_note_description_2": {
+      "message": "2. 当存储空间达到 80% 时（80KB），将会自动删除较早的备份。"
+   },
+   "backup_tips_note_title": {
+      "message": "⚠️ 注意"
+   },
+   "choose_backup": {
+      "message": "选择备份"
+   },
+   "close": {
+      "message": "关闭"
+   },
+   "common": {
+      "message": "常用"
+   },
+   "copy_rule": {
+      "message": "复制规则"
+   },
+   "create_backup_failed": {
+      "message": "创建备份失败: $error$",
+      "placeholders": {
+         "error": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "delete_backup_confirm_description": {
+      "message": "删除后无法恢复"
+   },
+   "delete_backup_confirm_title": {
+      "message": "确定要删除备份吗？"
+   },
+   "delete_backup_failed": {
+      "message": "删除备份失败",
+      "placeholders": {
+         "error": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "delete_rule": {
+      "message": "删除规则"
+   },
+   "delete_rule_confirmation": {
+      "message": "确定要删除该规则吗？"
+   },
+   "description": {
+      "message": "通过灵活的自定义规则代理/转发/替换网页资源的前端开发工具，支持暗黑模式和导入导出。"
+   },
+   "dynamic_rules": {
+      "message": "动态规则"
+   },
+   "enable_backup": {
+      "message": "启用备份"
+   },
+   "enable_source_map": {
+      "message": "启用 Source Map"
+   },
+   "fetch_backup_failed": {
+      "message": "获取备份失败: $error$",
+      "placeholders": {
+         "error": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "fetch_backup_list_failed": {
+      "message": "获取备份列表失败",
+      "placeholders": {
+         "error": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "group_copy": {
+      "message": "复制"
+   },
+   "group_default_name": {
+      "message": "未命名分组"
+   },
+   "group_delete": {
+      "message": "删除"
+   },
+   "group_delete_confirm": {
+      "message": "分组下的所有规则都将同步删除且无法恢复"
+   },
+   "group_delete_title": {
+      "message": "确定要删除该分组吗？"
+   },
+   "group_edit": {
+      "message": "编辑"
+   },
+   "group_name": {
+      "message": "分组名称"
+   },
+   "group_name_cloned": {
+      "message": "复制 $name$",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "未命名分组"
+         }
+      }
+   },
+   "group_name_required": {
+      "message": "分组名称不能为空"
+   },
+   "import": {
+      "message": "导入"
+   },
+   "import_error_content_invalid": {
+      "message": "规则内容为空或格式不正确 $error$",
+      "placeholders": {
+         "error": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "import_error_title": {
+      "message": "导入失败"
+   },
+   "import_export": {
+      "message": "导入/导出"
+   },
+   "import_not_changed": {
+      "message": "规则未发生变化"
+   },
+   "import_success": {
+      "message": "导入成功，请稍后"
+   },
+   "no_results": {
+      "message": "暂无数据"
+   },
+   "redirect_source_placeholder": {
+      "message": "例如 ^https://(dev.)?mycdn.com/my-project/([^/+])/(.*)"
+   },
+   "redirect_target_placeholder": {
+      "message": "例如 http://127.0.0.1:3000/\\3"
+   },
+   "regex_rules": {
+      "message": "正则规则"
+   },
+   "rule_help_regex_forward_title": {
+      "message": "转发规则（使用 \\序号 引用捕获内容）："
+   },
+   "rule_help_regex_match_title": {
+      "message": "匹配规则（注意以 ^ 开头）："
+   },
+   "rule_help_regex_title": {
+      "message": "使用正则规则"
+   },
+   "rule_help_static_forward_title": {
+      "message": "转发规则："
+   },
+   "rule_help_static_match_title": {
+      "message": "匹配规则："
+   },
+   "rule_help_static_title": {
+      "message": "使用静态规则"
+   },
+   "rule_help_tip_1": {
+      "message": "更详细的规则说明请参考 Google Chrome 的官方文档："
+   },
+   "rule_help_tip_2": {
+      "message": "网址匹配"
+   },
+   "rule_help_title": {
+      "message": "规则说明"
+   },
+   "rule_help_wildcard_forward_title": {
+      "message": "转发规则（无法引用匹配内容）："
+   },
+   "rule_help_wildcard_match_not_ok": {
+      "message": "不匹配"
+   },
+   "rule_help_wildcard_match_ok": {
+      "message": "配对"
+   },
+   "rule_help_wildcard_match_title": {
+      "message": "匹配规则："
+   },
+   "rule_help_wildcard_title": {
+      "message": "使用通配符规则"
+   },
+   "search_placeholder": {
+      "message": "搜索"
+   },
+   "source_map_source_placeholder": {
+      "message": "例如 https://mycdn.com/path/to/file.js"
+   },
+   "source_map_url_placeholder": {
+      "message": "例如 https://mycdn.com/path/to/file.js.map"
+   }
+}
