@@ -1,0 +1,3883 @@
+ft fonts:  Liberation fonts:       Google CrOS core fonts:  StarOffice fonts:  AMT fonts:
+================  ======================  =======================  =================  ==============
+Arial             Liberation Sans         Arimo                    Albany             Albany AMT
+Arial Narrow      Liberation Sans Narrow
+Times New Roman   Liberation Serif        Tinos                    Thorndale          Thorndale AMT
+Courier New       Liberation Mono         Cousine                  Cumberland         Cumberland AMT
+Cambria                                   Caladea
+Calibri                                   Carlito
+Symbol                                    SymbolNeu
+
+Microsoft fonts:  Other fonts:
+================  ============
+Georgia           Gelasio
+
+We want for each of them to fallback to any of these available,
+but in an order preferring similar designs first.  We do this in three steps:
+
+1) Alias each specific to its generic family.
+   e.g. Liberation Sans to Arial
+
+2) Weak alias each generic to the other generic of its family.
+   e.g. Arial to Helvetica
+
+3) Alias each generic to its specifics.
+   e.g. Arial to Liberation Sans, Arimo, Albany, and Albany AMT
+
+NOTE: The (URW)++ fonts mappings of generics to specifics were removed, because
+      upstream now includes them in their release of (URW)++ Core Font Set here:
+      https://github.com/ArtifexSoftware/urw-base35-fonts/tree/master/fontconfig
+-->
+
+<!-- Map specifics to generics -->
+
+	<!-- PostScript -->
+	<alias binding="same">
+	  <family>Nimbus Sans L</family>
+	  <default>
+	  <family>Helvetica</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Nimbus Sans</family>
+	  <default>
+	  <family>Helvetica</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Heros</family>
+	  <default>
+	  <family>Helvetica</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Nimbus Sans Narrow</family>
+	  <default>
+	  <family>Helvetica Narrow</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Heros Cn</family>
+	  <default>
+	  <family>Helvetica Narrow</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Nimbus Roman No9 L</family>
+	  <default>
+	  <family>Times</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Nimbus Roman</family>
+	  <default>
+	  <family>Times</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Termes</family>
+	  <default>
+	  <family>Times</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Nimbus Mono L</family>
+	  <default>
+	  <family>Courier</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Nimbus Mono</family>
+	  <default>
+	  <family>Courier</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Nimbus Mono PS</family>
+	  <default>
+	  <family>Courier</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Cursor</family>
+	  <default>
+	  <family>Courier</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Avant Garde</family>
+	  <default>
+	  <family>ITC Avant Garde Gothic</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>URW Gothic L</family>
+	  <default>
+	  <family>ITC Avant Garde Gothic</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>URW Gothic</family>
+	  <default>
+	  <family>ITC Avant Garde Gothic</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Adventor</family>
+	  <default>
+	  <family>ITC Avant Garde Gothic</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Bookman</family>
+	  <default>
+	  <family>ITC Bookman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>URW Bookman L</family>
+	  <default>
+	  <family>ITC Bookman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Bookman URW</family>
+	  <default>
+	  <family>ITC Bookman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>URW Bookman</family>
+	  <default>
+	  <family>ITC Bookman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Bonum</family>
+	  <default>
+	  <family>ITC Bookman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Bookman Old Style</family>
+	  <default>
+	  <family>ITC Bookman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Zapf Chancery</family>
+	  <default>
+	  <family>ITC Zapf Chancery</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>URW Chancery L</family>
+	  <default>
+	  <family>ITC Zapf Chancery</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Chancery URW</family>
+	  <default>
+	  <family>ITC Zapf Chancery</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Z003</family>
+	  <default>
+	  <family>ITC Zapf Chancery</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Chorus</family>
+	  <default>
+	  <family>ITC Zapf Chancery</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>URW Palladio L</family>
+	  <default>
+	  <family>Palatino</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Palladio URW</family>
+	  <default>
+	  <family>Palatino</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>P052</family>
+	  <default>
+	  <family>Palatino</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Pagella</family>
+	  <default>
+	  <family>Palatino</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Palatino Linotype</family>
+	  <default>
+	  <family>Palatino</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Century Schoolbook L</family>
+	  <default>
+	  <family>New Century Schoolbook</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Century SchoolBook URW</family>
+	  <default>
+	  <family>New Century Schoolbook</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>C059</family>
+	  <default>
+	  <family>New Century Schoolbook</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>TeX Gyre Schola</family>
+	  <default>
+	  <family>New Century Schoolbook</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Century Schoolbook</family>
+	  <default>
+	  <family>New Century Schoolbook</family>
+	  </default>
+	</alias>
+
+	<!-- Microsoft -->
+	<alias binding="same">
+	  <family>Arimo</family>
+	  <default>
+	    <family>Arial</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Liberation Sans</family>
+	  <default>
+	  <family>Arial</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Liberation Sans Narrow</family>
+	  <default>
+	    <family>Arial Narrow</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Albany</family>
+	  <default>
+	  <family>Arial</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Albany AMT</family>
+	  <default>
+	  <family>Arial</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Tinos</family>
+	  <default>
+	    <family>Times New Roman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Liberation Serif</family>
+	  <default>
+	  <family>Times New Roman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Thorndale</family>
+	  <default>
+	  <family>Times New Roman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Thorndale AMT</family>
+	  <default>
+	  <family>Times New Roman</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Cousine</family>
+	  <default>
+	    <family>Courier New</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Liberation Mono</family>
+	  <default>
+	  <family>Courier New</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Cumberland</family>
+	  <default>
+	  <family>Courier New</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Cumberland AMT</family>
+	  <default>
+	  <family>Courier New</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Gelasio</family>
+	  <default>
+	  <family>Georgia</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Caladea</family>
+	  <default>
+	  <family>Cambria</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>Carlito</family>
+	  <default>
+	  <family>Calibri</family>
+	  </default>
+	</alias>
+
+	<alias binding="same">
+	  <family>SymbolNeu</family>
+	  <default>
+	  <family>Symbol</family>
+	  </default>
+  </alias>
+
+<!-- Accept the other group as fallback -->
+
+	<!-- PostScript -->
+	<alias>
+	  <family>Helvetica</family>
+	  <default>
+	  <family>Arial</family>
+	  </default>
+	</alias>
+
+	<alias>
+	  <family>Helvetica Narrow</family>
+	  <default>
+	  <family>Arial Narrow</family>
+	  </default>
+	</alias>
+
+	<alias>
+	  <family>Times</family>
+	  <default>
+	  <family>Times New Roman</family>
+	  </default>
+	</alias>
+
+	<alias>
+	  <family>Courier</family>
+	  <default>
+	  <family>Courier New</family>
+	  </default>
+	</alias>
+
+	<!-- Microsoft -->
+	<alias>
+	  <family>Arial</family>
+	  <default>
+	  <family>Helvetica</family>
+	  </default>
+	</alias>
+
+	<alias>
+	  <family>Arial Narrow</family>
+	  <default>
+	  <family>Helvetica Narrow</family>
+	  </default>
+	</alias>
+
+	<alias>
+	  <family>Times New Roman</family>
+	  <default>
+	  <family>Times</family>
+	  </default>
+	</alias>
+
+	<alias>
+	  <family>Courier New</family>
+	  <default>
+	  <family>Courier</family>
+	  </default>
+	</alias>
+
+<!-- Map generics to specifics -->
+
+	<!-- PostScript -->
+	<alias binding="same">
+	  <family>Helvetica</family>
+	  <accept>
+	  <family>TeX Gyre Heros</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Helvetica Narrow</family>
+	  <accept>
+	  <family>TeX Gyre Heros Cn</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Times</family>
+	  <accept>
+	  <family>TeX Gyre Termes</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Courier</family>
+	  <accept>
+	  <family>TeX Gyre Cursor</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Courier Std</family>
+	  <accept>
+	  <family>Courier</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>ITC Avant Garde Gothic</family>
+	  <accept>
+	  <family>TeX Gyre Adventor</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>ITC Bookman</family>
+	  <accept>
+	  <family>Bookman Old Style</family>
+	  <family>TeX Gyre Bonum</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>ITC Zapf Chancery</family>
+	  <accept>
+	  <family>TeX Gyre Chorus</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Palatino</family>
+	  <accept>
+	  <family>Palatino Linotype</family>
+	  <family>TeX Gyre Pagella</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>New Century Schoolbook</family>
+	  <accept>
+	  <family>Century Schoolbook</family>
+	  <family>TeX Gyre Schola</family>
+	  </accept>
+	</alias>
+
+	<!-- Microsoft -->
+	<alias binding="same">
+	  <family>Arial</family>
+	  <accept>
+	    <family>Arimo</family>
+	    <family>Liberation Sans</family>
+	    <family>Albany</family>
+	    <family>Albany AMT</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Arial Narrow</family>
+	  <accept>
+	    <family>Liberation Sans Narrow</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Times New Roman</family>
+	  <accept>
+	    <family>Tinos</family>
+	    <family>Liberation Serif</family>
+	    <family>Thorndale</family>
+	    <family>Thorndale AMT</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Courier New</family>
+	  <accept>
+	    <family>Cousine</family>
+	    <family>Liberation Mono</family>
+	    <family>Cumberland</family>
+	    <family>Cumberland AMT</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Georgia</family>
+	  <accept>
+	    <family>Gelasio</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Cambria</family>
+	  <accept>
+	    <family>Caladea</family>
+	  </accept>
+	</alias>
+
+	<alias binding="same">
+	  <family>Calibri</family>
+	  <accept>
+	    <family>Carlito</family>
+	  </accept>
+  </alias>
+
+	<alias binding="same">
+	  <family>Symbol</family>
+	  <accept>
+	    <family>SymbolNeu</family>
+	  </accept>
+  </alias>
+
+</fontconfig>
+                                                                              usr/share/fontconfig/conf.avail/35-lang-normalize.conf                                              0100644 0000000 0000000 00000122065 14324604316 021360  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <!-- aa* -> aa -->
+  <match>
+    <test name="lang" compare="contains"><string>aa</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>aa</string></edit>
+  </match>
+  <!-- ab* -> ab -->
+  <match>
+    <test name="lang" compare="contains"><string>ab</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ab</string></edit>
+  </match>
+  <!-- af* -> af -->
+  <match>
+    <test name="lang" compare="contains"><string>af</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>af</string></edit>
+  </match>
+  <!-- ak* -> ak -->
+  <match>
+    <test name="lang" compare="contains"><string>ak</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ak</string></edit>
+  </match>
+  <!-- am* -> am -->
+  <match>
+    <test name="lang" compare="contains"><string>am</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>am</string></edit>
+  </match>
+  <!-- an* -> an -->
+  <match>
+    <test name="lang" compare="contains"><string>an</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>an</string></edit>
+  </match>
+  <!-- ar* -> ar -->
+  <match>
+    <test name="lang" compare="contains"><string>ar</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ar</string></edit>
+  </match>
+  <!-- as* -> as -->
+  <match>
+    <test name="lang" compare="contains"><string>as</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>as</string></edit>
+  </match>
+  <!-- ast* -> ast -->
+  <match>
+    <test name="lang" compare="contains"><string>ast</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ast</string></edit>
+  </match>
+  <!-- av* -> av -->
+  <match>
+    <test name="lang" compare="contains"><string>av</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>av</string></edit>
+  </match>
+  <!-- ay* -> ay -->
+  <match>
+    <test name="lang" compare="contains"><string>ay</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ay</string></edit>
+  </match>
+  <!-- ba* -> ba -->
+  <match>
+    <test name="lang" compare="contains"><string>ba</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ba</string></edit>
+  </match>
+  <!-- be* -> be -->
+  <match>
+    <test name="lang" compare="contains"><string>be</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>be</string></edit>
+  </match>
+  <!-- bg* -> bg -->
+  <match>
+    <test name="lang" compare="contains"><string>bg</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bg</string></edit>
+  </match>
+  <!-- bh* -> bh -->
+  <match>
+    <test name="lang" compare="contains"><string>bh</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bh</string></edit>
+  </match>
+  <!-- bho* -> bho -->
+  <match>
+    <test name="lang" compare="contains"><string>bho</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bho</string></edit>
+  </match>
+  <!-- bi* -> bi -->
+  <match>
+    <test name="lang" compare="contains"><string>bi</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bi</string></edit>
+  </match>
+  <!-- bin* -> bin -->
+  <match>
+    <test name="lang" compare="contains"><string>bin</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bin</string></edit>
+  </match>
+  <!-- bm* -> bm -->
+  <match>
+    <test name="lang" compare="contains"><string>bm</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bm</string></edit>
+  </match>
+  <!-- bn* -> bn -->
+  <match>
+    <test name="lang" compare="contains"><string>bn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bn</string></edit>
+  </match>
+  <!-- bo* -> bo -->
+  <match>
+    <test name="lang" compare="contains"><string>bo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bo</string></edit>
+  </match>
+  <!-- br* -> br -->
+  <match>
+    <test name="lang" compare="contains"><string>br</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>br</string></edit>
+  </match>
+  <!-- brx* -> brx -->
+  <match>
+    <test name="lang" compare="contains"><string>brx</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>brx</string></edit>
+  </match>
+  <!-- bs* -> bs -->
+  <match>
+    <test name="lang" compare="contains"><string>bs</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bs</string></edit>
+  </match>
+  <!-- bua* -> bua -->
+  <match>
+    <test name="lang" compare="contains"><string>bua</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>bua</string></edit>
+  </match>
+  <!-- byn* -> byn -->
+  <match>
+    <test name="lang" compare="contains"><string>byn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>byn</string></edit>
+  </match>
+  <!-- ca* -> ca -->
+  <match>
+    <test name="lang" compare="contains"><string>ca</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ca</string></edit>
+  </match>
+  <!-- ce* -> ce -->
+  <match>
+    <test name="lang" compare="contains"><string>ce</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ce</string></edit>
+  </match>
+  <!-- ch* -> ch -->
+  <match>
+    <test name="lang" compare="contains"><string>ch</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ch</string></edit>
+  </match>
+  <!-- chm* -> chm -->
+  <match>
+    <test name="lang" compare="contains"><string>chm</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>chm</string></edit>
+  </match>
+  <!-- chr* -> chr -->
+  <match>
+    <test name="lang" compare="contains"><string>chr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>chr</string></edit>
+  </match>
+  <!-- co* -> co -->
+  <match>
+    <test name="lang" compare="contains"><string>co</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>co</string></edit>
+  </match>
+  <!-- crh* -> crh -->
+  <match>
+    <test name="lang" compare="contains"><string>crh</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>crh</string></edit>
+  </match>
+  <!-- cs* -> cs -->
+  <match>
+    <test name="lang" compare="contains"><string>cs</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>cs</string></edit>
+  </match>
+  <!-- csb* -> csb -->
+  <match>
+    <test name="lang" compare="contains"><string>csb</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>csb</string></edit>
+  </match>
+  <!-- cu* -> cu -->
+  <match>
+    <test name="lang" compare="contains"><string>cu</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>cu</string></edit>
+  </match>
+  <!-- cv* -> cv -->
+  <match>
+    <test name="lang" compare="contains"><string>cv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>cv</string></edit>
+  </match>
+  <!-- cy* -> cy -->
+  <match>
+    <test name="lang" compare="contains"><string>cy</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>cy</string></edit>
+  </match>
+  <!-- da* -> da -->
+  <match>
+    <test name="lang" compare="contains"><string>da</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>da</string></edit>
+  </match>
+  <!-- de* -> de -->
+  <match>
+    <test name="lang" compare="contains"><string>de</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>de</string></edit>
+  </match>
+  <!-- doi* -> doi -->
+  <match>
+    <test name="lang" compare="contains"><string>doi</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>doi</string></edit>
+  </match>
+  <!-- dv* -> dv -->
+  <match>
+    <test name="lang" compare="contains"><string>dv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>dv</string></edit>
+  </match>
+  <!-- dz* -> dz -->
+  <match>
+    <test name="lang" compare="contains"><string>dz</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>dz</string></edit>
+  </match>
+  <!-- ee* -> ee -->
+  <match>
+    <test name="lang" compare="contains"><string>ee</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ee</string></edit>
+  </match>
+  <!-- el* -> el -->
+  <match>
+    <test name="lang" compare="contains"><string>el</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>el</string></edit>
+  </match>
+  <!-- en* -> en -->
+  <match>
+    <test name="lang" compare="contains"><string>en</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>en</string></edit>
+  </match>
+  <!-- eo* -> eo -->
+  <match>
+    <test name="lang" compare="contains"><string>eo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>eo</string></edit>
+  </match>
+  <!-- es* -> es -->
+  <match>
+    <test name="lang" compare="contains"><string>es</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>es</string></edit>
+  </match>
+  <!-- et* -> et -->
+  <match>
+    <test name="lang" compare="contains"><string>et</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>et</string></edit>
+  </match>
+  <!-- eu* -> eu -->
+  <match>
+    <test name="lang" compare="contains"><string>eu</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>eu</string></edit>
+  </match>
+  <!-- fa* -> fa -->
+  <match>
+    <test name="lang" compare="contains"><string>fa</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fa</string></edit>
+  </match>
+  <!-- fat* -> fat -->
+  <match>
+    <test name="lang" compare="contains"><string>fat</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fat</string></edit>
+  </match>
+  <!-- ff* -> ff -->
+  <match>
+    <test name="lang" compare="contains"><string>ff</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ff</string></edit>
+  </match>
+  <!-- fi* -> fi -->
+  <match>
+    <test name="lang" compare="contains"><string>fi</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fi</string></edit>
+  </match>
+  <!-- fil* -> fil -->
+  <match>
+    <test name="lang" compare="contains"><string>fil</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fil</string></edit>
+  </match>
+  <!-- fj* -> fj -->
+  <match>
+    <test name="lang" compare="contains"><string>fj</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fj</string></edit>
+  </match>
+  <!-- fo* -> fo -->
+  <match>
+    <test name="lang" compare="contains"><string>fo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fo</string></edit>
+  </match>
+  <!-- fr* -> fr -->
+  <match>
+    <test name="lang" compare="contains"><string>fr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fr</string></edit>
+  </match>
+  <!-- fur* -> fur -->
+  <match>
+    <test name="lang" compare="contains"><string>fur</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fur</string></edit>
+  </match>
+  <!-- fy* -> fy -->
+  <match>
+    <test name="lang" compare="contains"><string>fy</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>fy</string></edit>
+  </match>
+  <!-- ga* -> ga -->
+  <match>
+    <test name="lang" compare="contains"><string>ga</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ga</string></edit>
+  </match>
+  <!-- gd* -> gd -->
+  <match>
+    <test name="lang" compare="contains"><string>gd</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>gd</string></edit>
+  </match>
+  <!-- gez* -> gez -->
+  <match>
+    <test name="lang" compare="contains"><string>gez</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>gez</string></edit>
+  </match>
+  <!-- gl* -> gl -->
+  <match>
+    <test name="lang" compare="contains"><string>gl</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>gl</string></edit>
+  </match>
+  <!-- gn* -> gn -->
+  <match>
+    <test name="lang" compare="contains"><string>gn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>gn</string></edit>
+  </match>
+  <!-- gu* -> gu -->
+  <match>
+    <test name="lang" compare="contains"><string>gu</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>gu</string></edit>
+  </match>
+  <!-- gv* -> gv -->
+  <match>
+    <test name="lang" compare="contains"><string>gv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>gv</string></edit>
+  </match>
+  <!-- ha* -> ha -->
+  <match>
+    <test name="lang" compare="contains"><string>ha</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ha</string></edit>
+  </match>
+  <!-- haw* -> haw -->
+  <match>
+    <test name="lang" compare="contains"><string>haw</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>haw</string></edit>
+  </match>
+  <!-- he* -> he -->
+  <match>
+    <test name="lang" compare="contains"><string>he</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>he</string></edit>
+  </match>
+  <!-- hi* -> hi -->
+  <match>
+    <test name="lang" compare="contains"><string>hi</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>hi</string></edit>
+  </match>
+  <!-- hne* -> hne -->
+  <match>
+    <test name="lang" compare="contains"><string>hne</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>hne</string></edit>
+  </match>
+  <!-- ho* -> ho -->
+  <match>
+    <test name="lang" compare="contains"><string>ho</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ho</string></edit>
+  </match>
+  <!-- hr* -> hr -->
+  <match>
+    <test name="lang" compare="contains"><string>hr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>hr</string></edit>
+  </match>
+  <!-- hsb* -> hsb -->
+  <match>
+    <test name="lang" compare="contains"><string>hsb</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>hsb</string></edit>
+  </match>
+  <!-- ht* -> ht -->
+  <match>
+    <test name="lang" compare="contains"><string>ht</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ht</string></edit>
+  </match>
+  <!-- hu* -> hu -->
+  <match>
+    <test name="lang" compare="contains"><string>hu</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>hu</string></edit>
+  </match>
+  <!-- hy* -> hy -->
+  <match>
+    <test name="lang" compare="contains"><string>hy</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>hy</string></edit>
+  </match>
+  <!-- hz* -> hz -->
+  <match>
+    <test name="lang" compare="contains"><string>hz</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>hz</string></edit>
+  </match>
+  <!-- ia* -> ia -->
+  <match>
+    <test name="lang" compare="contains"><string>ia</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ia</string></edit>
+  </match>
+  <!-- id* -> id -->
+  <match>
+    <test name="lang" compare="contains"><string>id</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>id</string></edit>
+  </match>
+  <!-- ie* -> ie -->
+  <match>
+    <test name="lang" compare="contains"><string>ie</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ie</string></edit>
+  </match>
+  <!-- ig* -> ig -->
+  <match>
+    <test name="lang" compare="contains"><string>ig</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ig</string></edit>
+  </match>
+  <!-- ii* -> ii -->
+  <match>
+    <test name="lang" compare="contains"><string>ii</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ii</string></edit>
+  </match>
+  <!-- ik* -> ik -->
+  <match>
+    <test name="lang" compare="contains"><string>ik</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ik</string></edit>
+  </match>
+  <!-- io* -> io -->
+  <match>
+    <test name="lang" compare="contains"><string>io</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>io</string></edit>
+  </match>
+  <!-- is* -> is -->
+  <match>
+    <test name="lang" compare="contains"><string>is</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>is</string></edit>
+  </match>
+  <!-- it* -> it -->
+  <match>
+    <test name="lang" compare="contains"><string>it</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>it</string></edit>
+  </match>
+  <!-- iu* -> iu -->
+  <match>
+    <test name="lang" compare="contains"><string>iu</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>iu</string></edit>
+  </match>
+  <!-- ja* -> ja -->
+  <match>
+    <test name="lang" compare="contains"><string>ja</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ja</string></edit>
+  </match>
+  <!-- jv* -> jv -->
+  <match>
+    <test name="lang" compare="contains"><string>jv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>jv</string></edit>
+  </match>
+  <!-- ka* -> ka -->
+  <match>
+    <test name="lang" compare="contains"><string>ka</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ka</string></edit>
+  </match>
+  <!-- kaa* -> kaa -->
+  <match>
+    <test name="lang" compare="contains"><string>kaa</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kaa</string></edit>
+  </match>
+  <!-- kab* -> kab -->
+  <match>
+    <test name="lang" compare="contains"><string>kab</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kab</string></edit>
+  </match>
+  <!-- ki* -> ki -->
+  <match>
+    <test name="lang" compare="contains"><string>ki</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ki</string></edit>
+  </match>
+  <!-- kj* -> kj -->
+  <match>
+    <test name="lang" compare="contains"><string>kj</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kj</string></edit>
+  </match>
+  <!-- kk* -> kk -->
+  <match>
+    <test name="lang" compare="contains"><string>kk</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kk</string></edit>
+  </match>
+  <!-- kl* -> kl -->
+  <match>
+    <test name="lang" compare="contains"><string>kl</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kl</string></edit>
+  </match>
+  <!-- km* -> km -->
+  <match>
+    <test name="lang" compare="contains"><string>km</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>km</string></edit>
+  </match>
+  <!-- kn* -> kn -->
+  <match>
+    <test name="lang" compare="contains"><string>kn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kn</string></edit>
+  </match>
+  <!-- ko* -> ko -->
+  <match>
+    <test name="lang" compare="contains"><string>ko</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ko</string></edit>
+  </match>
+  <!-- kok* -> kok -->
+  <match>
+    <test name="lang" compare="contains"><string>kok</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kok</string></edit>
+  </match>
+  <!-- kr* -> kr -->
+  <match>
+    <test name="lang" compare="contains"><string>kr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kr</string></edit>
+  </match>
+  <!-- ks* -> ks -->
+  <match>
+    <test name="lang" compare="contains"><string>ks</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ks</string></edit>
+  </match>
+  <!-- kum* -> kum -->
+  <match>
+    <test name="lang" compare="contains"><string>kum</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kum</string></edit>
+  </match>
+  <!-- kv* -> kv -->
+  <match>
+    <test name="lang" compare="contains"><string>kv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kv</string></edit>
+  </match>
+  <!-- kw* -> kw -->
+  <match>
+    <test name="lang" compare="contains"><string>kw</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kw</string></edit>
+  </match>
+  <!-- kwm* -> kwm -->
+  <match>
+    <test name="lang" compare="contains"><string>kwm</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>kwm</string></edit>
+  </match>
+  <!-- ky* -> ky -->
+  <match>
+    <test name="lang" compare="contains"><string>ky</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ky</string></edit>
+  </match>
+  <!-- la* -> la -->
+  <match>
+    <test name="lang" compare="contains"><string>la</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>la</string></edit>
+  </match>
+  <!-- lah* -> lah -->
+  <match>
+    <test name="lang" compare="contains"><string>lah</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>lah</string></edit>
+  </match>
+  <!-- lb* -> lb -->
+  <match>
+    <test name="lang" compare="contains"><string>lb</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>lb</string></edit>
+  </match>
+  <!-- lez* -> lez -->
+  <match>
+    <test name="lang" compare="contains"><string>lez</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>lez</string></edit>
+  </match>
+  <!-- lg* -> lg -->
+  <match>
+    <test name="lang" compare="contains"><string>lg</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>lg</string></edit>
+  </match>
+  <!-- li* -> li -->
+  <match>
+    <test name="lang" compare="contains"><string>li</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>li</string></edit>
+  </match>
+  <!-- ln* -> ln -->
+  <match>
+    <test name="lang" compare="contains"><string>ln</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ln</string></edit>
+  </match>
+  <!-- lo* -> lo -->
+  <match>
+    <test name="lang" compare="contains"><string>lo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>lo</string></edit>
+  </match>
+  <!-- lt* -> lt -->
+  <match>
+    <test name="lang" compare="contains"><string>lt</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>lt</string></edit>
+  </match>
+  <!-- lv* -> lv -->
+  <match>
+    <test name="lang" compare="contains"><string>lv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>lv</string></edit>
+  </match>
+  <!-- mai* -> mai -->
+  <match>
+    <test name="lang" compare="contains"><string>mai</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mai</string></edit>
+  </match>
+  <!-- mg* -> mg -->
+  <match>
+    <test name="lang" compare="contains"><string>mg</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mg</string></edit>
+  </match>
+  <!-- mh* -> mh -->
+  <match>
+    <test name="lang" compare="contains"><string>mh</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mh</string></edit>
+  </match>
+  <!-- mi* -> mi -->
+  <match>
+    <test name="lang" compare="contains"><string>mi</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mi</string></edit>
+  </match>
+  <!-- mk* -> mk -->
+  <match>
+    <test name="lang" compare="contains"><string>mk</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mk</string></edit>
+  </match>
+  <!-- ml* -> ml -->
+  <match>
+    <test name="lang" compare="contains"><string>ml</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ml</string></edit>
+  </match>
+  <!-- mni* -> mni -->
+  <match>
+    <test name="lang" compare="contains"><string>mni</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mni</string></edit>
+  </match>
+  <!-- mo* -> mo -->
+  <match>
+    <test name="lang" compare="contains"><string>mo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mo</string></edit>
+  </match>
+  <!-- mr* -> mr -->
+  <match>
+    <test name="lang" compare="contains"><string>mr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mr</string></edit>
+  </match>
+  <!-- ms* -> ms -->
+  <match>
+    <test name="lang" compare="contains"><string>ms</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ms</string></edit>
+  </match>
+  <!-- mt* -> mt -->
+  <match>
+    <test name="lang" compare="contains"><string>mt</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>mt</string></edit>
+  </match>
+  <!-- my* -> my -->
+  <match>
+    <test name="lang" compare="contains"><string>my</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>my</string></edit>
+  </match>
+  <!-- na* -> na -->
+  <match>
+    <test name="lang" compare="contains"><string>na</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>na</string></edit>
+  </match>
+  <!-- nb* -> nb -->
+  <match>
+    <test name="lang" compare="contains"><string>nb</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nb</string></edit>
+  </match>
+  <!-- nds* -> nds -->
+  <match>
+    <test name="lang" compare="contains"><string>nds</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nds</string></edit>
+  </match>
+  <!-- ne* -> ne -->
+  <match>
+    <test name="lang" compare="contains"><string>ne</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ne</string></edit>
+  </match>
+  <!-- ng* -> ng -->
+  <match>
+    <test name="lang" compare="contains"><string>ng</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ng</string></edit>
+  </match>
+  <!-- nl* -> nl -->
+  <match>
+    <test name="lang" compare="contains"><string>nl</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nl</string></edit>
+  </match>
+  <!-- nn* -> nn -->
+  <match>
+    <test name="lang" compare="contains"><string>nn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nn</string></edit>
+  </match>
+  <!-- no* -> no -->
+  <match>
+    <test name="lang" compare="contains"><string>no</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>no</string></edit>
+  </match>
+  <!-- nqo* -> nqo -->
+  <match>
+    <test name="lang" compare="contains"><string>nqo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nqo</string></edit>
+  </match>
+  <!-- nr* -> nr -->
+  <match>
+    <test name="lang" compare="contains"><string>nr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nr</string></edit>
+  </match>
+  <!-- nso* -> nso -->
+  <match>
+    <test name="lang" compare="contains"><string>nso</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nso</string></edit>
+  </match>
+  <!-- nv* -> nv -->
+  <match>
+    <test name="lang" compare="contains"><string>nv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>nv</string></edit>
+  </match>
+  <!-- ny* -> ny -->
+  <match>
+    <test name="lang" compare="contains"><string>ny</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ny</string></edit>
+  </match>
+  <!-- oc* -> oc -->
+  <match>
+    <test name="lang" compare="contains"><string>oc</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>oc</string></edit>
+  </match>
+  <!-- om* -> om -->
+  <match>
+    <test name="lang" compare="contains"><string>om</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>om</string></edit>
+  </match>
+  <!-- or* -> or -->
+  <match>
+    <test name="lang" compare="contains"><string>or</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>or</string></edit>
+  </match>
+  <!-- os* -> os -->
+  <match>
+    <test name="lang" compare="contains"><string>os</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>os</string></edit>
+  </match>
+  <!-- ota* -> ota -->
+  <match>
+    <test name="lang" compare="contains"><string>ota</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ota</string></edit>
+  </match>
+  <!-- pa* -> pa -->
+  <match>
+    <test name="lang" compare="contains"><string>pa</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>pa</string></edit>
+  </match>
+  <!-- pl* -> pl -->
+  <match>
+    <test name="lang" compare="contains"><string>pl</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>pl</string></edit>
+  </match>
+  <!-- pt* -> pt -->
+  <match>
+    <test name="lang" compare="contains"><string>pt</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>pt</string></edit>
+  </match>
+  <!-- qu* -> qu -->
+  <match>
+    <test name="lang" compare="contains"><string>qu</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>qu</string></edit>
+  </match>
+  <!-- quz* -> quz -->
+  <match>
+    <test name="lang" compare="contains"><string>quz</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>quz</string></edit>
+  </match>
+  <!-- rm* -> rm -->
+  <match>
+    <test name="lang" compare="contains"><string>rm</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>rm</string></edit>
+  </match>
+  <!-- rn* -> rn -->
+  <match>
+    <test name="lang" compare="contains"><string>rn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>rn</string></edit>
+  </match>
+  <!-- ro* -> ro -->
+  <match>
+    <test name="lang" compare="contains"><string>ro</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ro</string></edit>
+  </match>
+  <!-- ru* -> ru -->
+  <match>
+    <test name="lang" compare="contains"><string>ru</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ru</string></edit>
+  </match>
+  <!-- rw* -> rw -->
+  <match>
+    <test name="lang" compare="contains"><string>rw</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>rw</string></edit>
+  </match>
+  <!-- sa* -> sa -->
+  <match>
+    <test name="lang" compare="contains"><string>sa</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sa</string></edit>
+  </match>
+  <!-- sah* -> sah -->
+  <match>
+    <test name="lang" compare="contains"><string>sah</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sah</string></edit>
+  </match>
+  <!-- sat* -> sat -->
+  <match>
+    <test name="lang" compare="contains"><string>sat</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sat</string></edit>
+  </match>
+  <!-- sc* -> sc -->
+  <match>
+    <test name="lang" compare="contains"><string>sc</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sc</string></edit>
+  </match>
+  <!-- sco* -> sco -->
+  <match>
+    <test name="lang" compare="contains"><string>sco</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sco</string></edit>
+  </match>
+  <!-- sd* -> sd -->
+  <match>
+    <test name="lang" compare="contains"><string>sd</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sd</string></edit>
+  </match>
+  <!-- se* -> se -->
+  <match>
+    <test name="lang" compare="contains"><string>se</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>se</string></edit>
+  </match>
+  <!-- sel* -> sel -->
+  <match>
+    <test name="lang" compare="contains"><string>sel</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sel</string></edit>
+  </match>
+  <!-- sg* -> sg -->
+  <match>
+    <test name="lang" compare="contains"><string>sg</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sg</string></edit>
+  </match>
+  <!-- sh* -> sh -->
+  <match>
+    <test name="lang" compare="contains"><string>sh</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sh</string></edit>
+  </match>
+  <!-- shs* -> shs -->
+  <match>
+    <test name="lang" compare="contains"><string>shs</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>shs</string></edit>
+  </match>
+  <!-- si* -> si -->
+  <match>
+    <test name="lang" compare="contains"><string>si</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>si</string></edit>
+  </match>
+  <!-- sid* -> sid -->
+  <match>
+    <test name="lang" compare="contains"><string>sid</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sid</string></edit>
+  </match>
+  <!-- sk* -> sk -->
+  <match>
+    <test name="lang" compare="contains"><string>sk</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sk</string></edit>
+  </match>
+  <!-- sl* -> sl -->
+  <match>
+    <test name="lang" compare="contains"><string>sl</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sl</string></edit>
+  </match>
+  <!-- sm* -> sm -->
+  <match>
+    <test name="lang" compare="contains"><string>sm</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sm</string></edit>
+  </match>
+  <!-- sma* -> sma -->
+  <match>
+    <test name="lang" compare="contains"><string>sma</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sma</string></edit>
+  </match>
+  <!-- smj* -> smj -->
+  <match>
+    <test name="lang" compare="contains"><string>smj</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>smj</string></edit>
+  </match>
+  <!-- smn* -> smn -->
+  <match>
+    <test name="lang" compare="contains"><string>smn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>smn</string></edit>
+  </match>
+  <!-- sms* -> sms -->
+  <match>
+    <test name="lang" compare="contains"><string>sms</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sms</string></edit>
+  </match>
+  <!-- sn* -> sn -->
+  <match>
+    <test name="lang" compare="contains"><string>sn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sn</string></edit>
+  </match>
+  <!-- so* -> so -->
+  <match>
+    <test name="lang" compare="contains"><string>so</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>so</string></edit>
+  </match>
+  <!-- sq* -> sq -->
+  <match>
+    <test name="lang" compare="contains"><string>sq</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sq</string></edit>
+  </match>
+  <!-- sr* -> sr -->
+  <match>
+    <test name="lang" compare="contains"><string>sr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sr</string></edit>
+  </match>
+  <!-- ss* -> ss -->
+  <match>
+    <test name="lang" compare="contains"><string>ss</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ss</string></edit>
+  </match>
+  <!-- st* -> st -->
+  <match>
+    <test name="lang" compare="contains"><string>st</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>st</string></edit>
+  </match>
+  <!-- su* -> su -->
+  <match>
+    <test name="lang" compare="contains"><string>su</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>su</string></edit>
+  </match>
+  <!-- sv* -> sv -->
+  <match>
+    <test name="lang" compare="contains"><string>sv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sv</string></edit>
+  </match>
+  <!-- sw* -> sw -->
+  <match>
+    <test name="lang" compare="contains"><string>sw</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>sw</string></edit>
+  </match>
+  <!-- syr* -> syr -->
+  <match>
+    <test name="lang" compare="contains"><string>syr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>syr</string></edit>
+  </match>
+  <!-- ta* -> ta -->
+  <match>
+    <test name="lang" compare="contains"><string>ta</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ta</string></edit>
+  </match>
+  <!-- te* -> te -->
+  <match>
+    <test name="lang" compare="contains"><string>te</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>te</string></edit>
+  </match>
+  <!-- tg* -> tg -->
+  <match>
+    <test name="lang" compare="contains"><string>tg</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tg</string></edit>
+  </match>
+  <!-- th* -> th -->
+  <match>
+    <test name="lang" compare="contains"><string>th</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>th</string></edit>
+  </match>
+  <!-- tig* -> tig -->
+  <match>
+    <test name="lang" compare="contains"><string>tig</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tig</string></edit>
+  </match>
+  <!-- tk* -> tk -->
+  <match>
+    <test name="lang" compare="contains"><string>tk</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tk</string></edit>
+  </match>
+  <!-- tl* -> tl -->
+  <match>
+    <test name="lang" compare="contains"><string>tl</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tl</string></edit>
+  </match>
+  <!-- tn* -> tn -->
+  <match>
+    <test name="lang" compare="contains"><string>tn</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tn</string></edit>
+  </match>
+  <!-- to* -> to -->
+  <match>
+    <test name="lang" compare="contains"><string>to</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>to</string></edit>
+  </match>
+  <!-- tr* -> tr -->
+  <match>
+    <test name="lang" compare="contains"><string>tr</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tr</string></edit>
+  </match>
+  <!-- ts* -> ts -->
+  <match>
+    <test name="lang" compare="contains"><string>ts</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ts</string></edit>
+  </match>
+  <!-- tt* -> tt -->
+  <match>
+    <test name="lang" compare="contains"><string>tt</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tt</string></edit>
+  </match>
+  <!-- tw* -> tw -->
+  <match>
+    <test name="lang" compare="contains"><string>tw</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tw</string></edit>
+  </match>
+  <!-- ty* -> ty -->
+  <match>
+    <test name="lang" compare="contains"><string>ty</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ty</string></edit>
+  </match>
+  <!-- tyv* -> tyv -->
+  <match>
+    <test name="lang" compare="contains"><string>tyv</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>tyv</string></edit>
+  </match>
+  <!-- ug* -> ug -->
+  <match>
+    <test name="lang" compare="contains"><string>ug</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ug</string></edit>
+  </match>
+  <!-- uk* -> uk -->
+  <match>
+    <test name="lang" compare="contains"><string>uk</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>uk</string></edit>
+  </match>
+  <!-- ur* -> ur -->
+  <match>
+    <test name="lang" compare="contains"><string>ur</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ur</string></edit>
+  </match>
+  <!-- uz* -> uz -->
+  <match>
+    <test name="lang" compare="contains"><string>uz</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>uz</string></edit>
+  </match>
+  <!-- ve* -> ve -->
+  <match>
+    <test name="lang" compare="contains"><string>ve</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>ve</string></edit>
+  </match>
+  <!-- vi* -> vi -->
+  <match>
+    <test name="lang" compare="contains"><string>vi</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>vi</string></edit>
+  </match>
+  <!-- vo* -> vo -->
+  <match>
+    <test name="lang" compare="contains"><string>vo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>vo</string></edit>
+  </match>
+  <!-- vot* -> vot -->
+  <match>
+    <test name="lang" compare="contains"><string>vot</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>vot</string></edit>
+  </match>
+  <!-- wa* -> wa -->
+  <match>
+    <test name="lang" compare="contains"><string>wa</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>wa</string></edit>
+  </match>
+  <!-- wal* -> wal -->
+  <match>
+    <test name="lang" compare="contains"><string>wal</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>wal</string></edit>
+  </match>
+  <!-- wen* -> wen -->
+  <match>
+    <test name="lang" compare="contains"><string>wen</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>wen</string></edit>
+  </match>
+  <!-- wo* -> wo -->
+  <match>
+    <test name="lang" compare="contains"><string>wo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>wo</string></edit>
+  </match>
+  <!-- xh* -> xh -->
+  <match>
+    <test name="lang" compare="contains"><string>xh</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>xh</string></edit>
+  </match>
+  <!-- yap* -> yap -->
+  <match>
+    <test name="lang" compare="contains"><string>yap</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>yap</string></edit>
+  </match>
+  <!-- yi* -> yi -->
+  <match>
+    <test name="lang" compare="contains"><string>yi</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>yi</string></edit>
+  </match>
+  <!-- yo* -> yo -->
+  <match>
+    <test name="lang" compare="contains"><string>yo</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>yo</string></edit>
+  </match>
+  <!-- za* -> za -->
+  <match>
+    <test name="lang" compare="contains"><string>za</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>za</string></edit>
+  </match>
+  <!-- zu* -> zu -->
+  <match>
+    <test name="lang" compare="contains"><string>zu</string></test>
+    <edit name="lang" mode="assign" binding="same"><string>zu</string></edit>
+  </match>
+</fontconfig>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                           usr/share/fontconfig/conf.avail/40-nonlatin.conf                                                    0100644 0000000 0000000 00000017137 14324604316 020262  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Set substitutions for non-Latin fonts</description>
+<!--
+  Mark common families with their generics so we'll get
+  something reasonable
+-->
+
+<!--
+  Serif faces
+ -->
+	<alias>
+		<family>Nazli</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Lotoos</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Mitra</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Ferdosi</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Badr</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Zar</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Titr</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Jadid</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Kochi Mincho</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>AR PL SungtiL GB</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>AR PL Mingti2L Big5</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>ＭＳ 明朝</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>NanumMyeongjo</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>UnBatang</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Baekmuk Batang</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>MgOpen Canonica</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Sazanami Mincho</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>AR PL ZenKai Uni</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>ZYSong18030</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>FreeSerif</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>SimSun</family>
+		<default><family>serif</family></default>
+	</alias>
+<!--
+  Sans-serif faces
+ -->
+	<alias>
+		<family>Arshia</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Elham</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Farnaz</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Nasim</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Sina</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Roya</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Koodak</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Terafik</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Kochi Gothic</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>AR PL KaitiM GB</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>AR PL KaitiM Big5</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>ＭＳ ゴシック</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>NanumGothic</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>UnDotum</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Baekmuk Dotum</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>MgOpen Modata</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Sazanami Gothic</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>AR PL ShanHeiSun Uni</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>ZYSong18030</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>FreeSans</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+<!--
+  Monospace faces
+ -->
+	<alias>
+		<family>NSimSun</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>ZYSong18030</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>NanumGothicCoding</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>FreeMono</family>
+		<default><family>monospace</family></default>
+	</alias>
+
+<!--
+  Fantasy faces
+ -->
+	<alias>
+		<family>Homa</family>
+		<default><family>fantasy</family></default>
+	</alias>
+	<alias>
+		<family>Kamran</family>
+		<default><family>fantasy</family></default>
+	</alias>
+	<alias>
+		<family>Fantezi</family>
+		<default><family>fantasy</family></default>
+	</alias>
+	<alias>
+		<family>Tabassom</family>
+		<default><family>fantasy</family></default>
+	</alias>
+
+<!--
+  Cursive faces
+ -->
+	<alias>
+		<family>IranNastaliq</family>
+		<default><family>cursive</family></default>
+	</alias>
+	<alias>
+		<family>Nafees Nastaleeq</family>
+		<default><family>cursive</family></default>
+	</alias>
+
+<!--
+  system-ui
+-->
+	<alias>
+		<family>Noto Sans Arabic UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Bengali UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Devanagari UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Gujarati UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Gurmukhi UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Kannada UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Khmer UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Lao UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Malayalam UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Myanmar UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Oriya UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Sinhala UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Tamil UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Telugu UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans Thai UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Leelawadee UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Nirmala UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Yu Gothic UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Meiryo UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>MS UI Gothic</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Khmer UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Lao UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Microsoft JhengHei UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Microsoft YaHei UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+
+</fontconfig>
+                                                                                                                                                                                                                                                                                                                                                                                                                                 usr/share/fontconfig/conf.avail/45-generic.conf                                                     0100644 0000000 0000000 00000006642 14324604316 020060  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Set substitutions for emoji/math fonts</description>
+
+<!-- Keep in sync with 60-generic.conf -->
+
+<!-- Emoji -->
+
+	<!-- System emoji -->
+	<alias binding="same">
+		<family>Noto Color Emoji</family> <!-- Google -->
+		<default><family>emoji</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Apple Color Emoji</family> <!-- Apple -->
+		<default><family>emoji</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Segoe UI Emoji</family> <!-- Microsoft -->
+		<default><family>emoji</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Twitter Color Emoji</family> <!-- Twitter -->
+		<default><family>emoji</family></default>
+	</alias>
+	<alias binding="same">
+		<family>EmojiOne Mozilla</family> <!-- Mozilla -->
+		<default><family>emoji</family></default>
+	</alias>
+	<!-- Third-party emoji -->
+	<alias binding="same">
+		<family>Emoji Two</family>
+		<default><family>emoji</family></default>
+	</alias>
+	<alias binding="same">
+		<family>JoyPixels</family>
+		<default><family>emoji</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Emoji One</family>
+		<default><family>emoji</family></default>
+	</alias>
+	<!-- B&W -->
+	<alias binding="same">
+		<family>Noto Emoji</family> <!-- Google -->
+		<default><family>emoji</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Android Emoji</family> <!-- Google -->
+		<default><family>emoji</family></default>
+	</alias>
+
+	<!-- Add language for emoji, to match other emoji fonts. -->
+	<match>
+		<test name="family">
+			<string>emoji</string>
+		</test>
+		<edit name="lang" mode="prepend">
+			<string>und-zsye</string>
+		</edit>
+	</match>
+
+	<match>
+		<test name="lang">
+			<string>und-zsye</string>
+		</test>
+		<test qual="all" name="family" compare="not_eq">
+			<string>emoji</string>
+		</test>
+
+		<!-- Add generic family. -->
+		<edit name="family" mode="append" binding="strong">
+			<string>emoji</string>
+		</edit>
+	</match>
+
+
+<!-- Math -->
+
+	<!-- https://en.wikipedia.org/wiki/Category:Mathematical_OpenType_typefaces -->
+	<alias binding="same">
+		<family>XITS Math</family> <!-- Khaled Hosny -->
+		<default><family>math</family></default>
+	</alias>
+	<alias binding="same">
+		<family>STIX Two Math</family> <!-- AMS -->
+		<default><family>math</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Cambria Math</family> <!-- Microsoft -->
+		<default><family>math</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Latin Modern Math</family> <!-- TeX -->
+		<default><family>math</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Minion Math</family> <!-- Adobe -->
+		<default><family>math</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Lucida Math</family> <!-- Adobe -->
+		<default><family>math</family></default>
+	</alias>
+	<alias binding="same">
+		<family>Asana Math</family>
+		<default><family>math</family></default>
+	</alias>
+
+	<!-- Add language for math, to match other math fonts. -->
+	<match>
+		<test name="family">
+			<string>math</string>
+		</test>
+		<edit name="lang" mode="prepend">
+			<string>und-zmth</string>
+		</edit>
+	</match>
+
+	<match>
+		<test name="lang">
+			<string>und-zmth</string>
+		</test>
+		<test qual="all" name="family" compare="not_eq">
+			<string>math</string>
+		</test>
+
+		<!-- Add generic family -->
+		<edit name="family" mode="append" binding="strong">
+			<string>math</string>
+		</edit>
+	</match>
+
+
+</fontconfig>
+                                                                                              usr/share/fontconfig/conf.avail/45-latin.conf                                                       0100644 0000000 0000000 00000015617 14324604316 017555  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Set substitutions for Latin fonts</description>
+<!--
+  Mark common families with their generics so we'll get
+  something reasonable
+-->
+
+<!--
+  Serif faces
+ -->
+	<alias>
+		<family>Bitstream Vera Serif</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Cambria</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Constantia</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>DejaVu Serif</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Elephant</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Garamond</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Georgia</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Liberation Serif</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Luxi Serif</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>MS Serif</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Nimbus Roman No9 L</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Nimbus Roman</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Palatino Linotype</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Thorndale AMT</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Thorndale</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Times New Roman</family>
+		<default><family>serif</family></default>
+	</alias>
+	<alias>
+		<family>Times</family>
+		<default><family>serif</family></default>
+	</alias>
+<!--
+  Sans-serif faces
+ -->
+	<alias>
+		<family>Albany AMT</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Albany</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Arial Unicode MS</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Arial</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Bitstream Vera Sans</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Britannic</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Calibri</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Candara</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Century Gothic</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Corbel</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>DejaVu Sans</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Helvetica</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Haettenschweiler</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Liberation Sans</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>MS Sans Serif</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Nimbus Sans L</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Nimbus Sans</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Luxi Sans</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Tahoma</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Trebuchet MS</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Twentieth Century</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+	<alias>
+		<family>Verdana</family>
+		<default><family>sans-serif</family></default>
+	</alias>
+<!--
+  Monospace faces
+ -->
+	<alias>
+		<family>Andale Mono</family>
+		<default><family>monospace</family></default>
+	</alias>
+ 	<alias>
+		<family>Bitstream Vera Sans Mono</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Consolas</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Courier New</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Courier</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Courier Std</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Cumberland AMT</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Cumberland</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>DejaVu Sans Mono</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Fixedsys</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Inconsolata</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Liberation Mono</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Luxi Mono</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Nimbus Mono L</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Nimbus Mono</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Nimbus Mono PS</family>
+		<default><family>monospace</family></default>
+	</alias>
+	<alias>
+		<family>Terminal</family>
+		<default><family>monospace</family></default>
+	</alias>
+<!--
+  Fantasy faces
+ -->
+	<alias>
+		<family>Bauhaus Std</family>
+		<default><family>fantasy</family></default>
+	</alias>
+	<alias>
+		<family>Cooper Std</family>
+		<default><family>fantasy</family></default>
+	</alias>
+	<alias>
+		<family>Copperplate Gothic Std</family>
+		<default><family>fantasy</family></default>
+	</alias>
+	<alias>
+		<family>Impact</family>
+		<default><family>fantasy</family></default>
+	</alias>
+<!--
+  Cursive faces
+  -->
+	<alias>
+		<family>Comic Sans MS</family>
+		<default><family>cursive</family></default>
+	</alias>
+	<alias>
+		<family>ITC Zapf Chancery Std</family>
+		<default><family>cursive</family></default>
+	</alias>
+	<alias>
+		<family>Zapfino</family>
+		<default><family>cursive</family></default>
+	</alias>
+<!--
+  system-ui
+-->
+	<alias>
+		<family>Cantarell</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Noto Sans UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Segoe UI</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Segoe UI Historic</family>
+		<default><family>system-ui</family></default>
+	</alias>
+	<alias>
+		<family>Segoe UI Symbol</family>
+		<default><family>system-ui</family></default>
+	</alias>
+
+</fontconfig>
+                                                                                                                 usr/share/fontconfig/conf.avail/48-spacing.conf                                                     0100644 0000000 0000000 00000000671 14324604316 020067  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Add mono to the family when spacing is 100</description>
+<!--
+  If the request specifies spacing 100, add monospace to family
+ -->
+	<match target="pattern">
+		<test qual="any" name="spacing" compare="eq">
+			<int>100</int>
+		</test>
+		<edit name="family" mode="prepend">
+			<string>monospace</string>
+		</edit>
+	</match>
+</fontconfig>
+                                                                       usr/share/fontconfig/conf.avail/49-sansserif.conf                                                   0100644 0000000 0000000 00000001177 14324604316 020443  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Add sans-serif to the family when no generic name</description>
+<!--
+  If the font still has no generic name, add sans-serif
+ -->
+	<match target="pattern">
+		<test qual="all" name="family" compare="not_eq">
+			<string>sans-serif</string>
+		</test>
+		<test qual="all" name="family" compare="not_eq">
+			<string>serif</string>
+		</test>
+		<test qual="all" name="family" compare="not_eq">
+			<string>monospace</string>
+		</test>
+		<edit name="family" mode="append_last">
+			<string>sans-serif</string>
+		</edit>
+	</match>
+</fontconfig>
+                                                                                                                                                                                                                                                                                                                                                                                                 usr/share/fontconfig/conf.avail/50-user.conf                                                        0100644 0000000 0000000 00000001357 14324604316 017414  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Load per-user customization files</description>
+	<!--
+	    Load per-user customization files where stored on XDG Base Directory
+	    specification compliant places. it should be usually:
+	      $HOME/.config/fontconfig/conf.d
+	      $HOME/.config/fontconfig/fonts.conf
+	-->
+	<include ignore_missing="yes" prefix="xdg">fontconfig/conf.d</include>
+	<include ignore_missing="yes" prefix="xdg">fontconfig/fonts.conf</include>
+	<!-- the following elements will be removed in the future -->
+	<include ignore_missing="yes" deprecated="yes">~/.fonts.conf.d</include>
+	<include ignore_missing="yes" deprecated="yes">~/.fonts.conf</include>
+</fontconfig>
+                                                                                                                                                                                                                                                                                 usr/share/fontconfig/conf.avail/51-local.conf                                                       0100644 0000000 0000000 00000000407 14324604316 017524  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Load local customization file</description>
+	<!-- Load local system customization file -->
+	<include ignore_missing="yes">local.conf</include>
+</fontconfig>
+                                                                                                                                                                                                                                                         usr/share/fontconfig/conf.avail/60-generic.conf                                                     0100644 0000000 0000000 00000003567 14324604316 020060  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Set preferable fonts for emoji/math fonts</description>
+<!-- Keep in sync with 45-generic.conf -->
+
+<!-- Emoji -->
+
+	<!-- Prefer to match color emoji font. -->
+	<match>
+		<test name="lang">
+			<string>und-zsye</string>
+		</test>
+		<test qual="all" name="color" compare="not_eq">
+			<bool>true</bool>
+		</test>
+		<test qual="all" name="color" compare="not_eq">
+			<bool>false</bool>
+		</test>
+		<edit name="color" mode="append">
+			<bool>true</bool>
+		</edit>
+	</match>
+
+	<!-- TODO
+	 ! Match on "color" and alias B&W ones first if no color is requested.
+	 ! That's "hard" because <alias> doesn't work in match and needs to be
+	 ! expanded to its non-sugar form.
+	 !-->
+	<alias binding="same">
+		<family>emoji</family>
+		<prefer>
+			<!-- System fonts -->
+			<family>Noto Color Emoji</family> <!-- Google -->
+			<family>Apple Color Emoji</family> <!-- Apple -->
+			<family>Segoe UI Emoji</family> <!-- Microsoft -->
+			<family>Twitter Color Emoji</family> <!-- Twitter -->
+			<family>EmojiOne Mozilla</family> <!-- Mozilla -->
+			<!-- Third-Party fonts -->
+			<family>Emoji Two</family>
+			<family>JoyPixels</family>
+			<family>Emoji One</family>
+			<!-- Non-color -->
+			<family>Noto Emoji</family> <!-- Google -->
+			<family>Android Emoji</family> <!-- Google -->
+		</prefer>
+	</alias>
+
+<!-- Math -->
+	<alias binding="same">
+		<!-- https://en.wikipedia.org/wiki/Category:Mathematical_OpenType_typefaces -->
+		<family>math</family>
+		<prefer>
+			<family>XITS Math</family> <!-- Khaled Hosny -->
+			<family>STIX Two Math</family> <!-- AMS -->
+			<family>Cambria Math</family> <!-- Microsoft -->
+			<family>Latin Modern Math</family> <!-- TeX -->
+			<family>Minion Math</family> <!-- Adobe -->
+			<family>Lucida Math</family> <!-- Adobe -->
+			<family>Asana Math</family>
+		</prefer>
+	</alias>
+
+</fontconfig>
+                                                                                                                                         usr/share/fontconfig/conf.avail/60-latin.conf                                                       0100644 0000000 0000000 00000004130 14324604316 017536  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Set preferable fonts for Latin</description>
+	<alias>
+		<family>serif</family>
+		<prefer>
+			<family>Noto Serif</family>
+			<family>DejaVu Serif</family>
+			<family>Times New Roman</family>
+			<family>Thorndale AMT</family>
+			<family>Luxi Serif</family>
+			<family>Nimbus Roman No9 L</family>
+			<family>Nimbus Roman</family>
+			<family>Times</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans-serif</family>
+		<prefer>
+			<family>Noto Sans</family>
+			<family>DejaVu Sans</family>
+			<family>Verdana</family>
+			<family>Arial</family>
+			<family>Albany AMT</family>
+			<family>Luxi Sans</family>
+			<family>Nimbus Sans L</family>
+			<family>Nimbus Sans</family>
+			<family>Helvetica</family>
+			<family>Lucida Sans Unicode</family>
+			<family>BPG Glaho International</family> <!-- lat,cyr,arab,geor -->
+			<family>Tahoma</family> <!-- lat,cyr,greek,heb,arab,thai -->
+		</prefer>
+	</alias>
+	<alias>
+		<family>monospace</family>
+		<prefer>
+			<family>Noto Sans Mono</family>
+			<family>DejaVu Sans Mono</family>
+			<family>Inconsolata</family>
+			<family>Andale Mono</family>
+			<family>Courier New</family>
+			<family>Cumberland AMT</family>
+			<family>Luxi Mono</family>
+			<family>Nimbus Mono L</family>
+			<family>Nimbus Mono</family>
+			<family>Nimbus Mono PS</family>
+			<family>Courier</family>
+		</prefer>
+	</alias>
+<!--
+  Fantasy faces
+ -->
+ 	<alias>
+		<family>fantasy</family>
+		<prefer>
+			<family>Impact</family>
+			<family>Copperplate Gothic Std</family>
+			<family>Cooper Std</family>
+			<family>Bauhaus Std</family>
+		</prefer>
+	</alias>
+<!--
+  Cursive faces
+  -->
+	<alias>
+		<family>cursive</family>
+		<prefer>
+			<family>ITC Zapf Chancery Std</family>
+			<family>Zapfino</family>
+			<family>Comic Sans MS</family>
+		</prefer>
+	</alias>
+<!--
+  system-ui
+-->
+	<alias>
+		<family>system-ui</family>
+		<prefer>
+			<family>Cantarell</family>
+			<family>Noto Sans UI</family>
+			<family>Segoe UI</family>
+			<family>Segoe UI Historic</family>
+			<family>Segoe UI Symbol</family>
+		</prefer>
+	</alias>
+
+</fontconfig>
+                                                                                                                                                                                                                                                                                                                                                                                                                                        usr/share/fontconfig/conf.avail/65-fonts-persian.conf                                               0100644 0000000 0000000 00000023624 14324604316 021235  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<!--
+  fonts-persian.conf
+  To configure Persian fonts from The FarsiWeb Project.
+
+  Copyright (C) 2005  Sharif FarsiWeb, Inc. <license@farsiweb.info>
+
+  Permission to use, copy, modify, distribute, and sell this software and its
+  documentation for any purpose is hereby granted without fee, provided that
+  the above copyright notice appear in all copies and that both that
+  copyright notice and this permission notice appear in supporting
+  documentation, and that the name of Sharif FarsiWeb, Inc. not be used in
+  advertising or publicity pertaining to distribution of the software without
+  specific, written prior permission.  Sharif FarsiWeb, Inc. makes no
+  representations about the suitability of this software for any purpose.  It
+  is provided "as is" without express or implied warranty.
+
+  SHARIF FARSIWEB, INC. DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+  INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+  EVENT SHALL THE AUTHOR(S) BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+  CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+
+  ChangeLog:
+    2005-04-03  Behdad Esfahbod:  Initial revision.
+    2005-10-09  Behdad Esfahbod:  Turned off back-slant and Tahoma sections.
+    2005-11-30  Behdad Esfahbod:  Set Titr susbtitution size to 24 points.
+    2008	Behdad Esfahbod:  Cleanup.  Add fantasy and cursive.
+  -->
+<fontconfig>
+
+<!-- Deprecated fonts are discouraged -->
+
+	<!-- Nesf[2] is officially deprecated and has problematic tables -->
+	<alias binding="same">
+	  <family>Nesf</family>
+	  <accept><family>Nesf2</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Nesf2</family>
+	  <accept><family>Persian_sansserif_default</family></accept>
+	</alias>
+
+<!-- Name changes and spelling variant aliases -->
+
+	<alias binding="same">
+	  <family>Nazanin</family>
+	  <accept><family>Nazli</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Lotus</family>
+	  <accept><family>Lotoos</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Yaqut</family>
+	  <accept><family>Yaghoot</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Yaghut</family>
+	  <accept><family>Yaghoot</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Traffic</family>
+	  <accept><family>Terafik</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Ferdowsi</family>
+	  <accept><family>Ferdosi</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Fantezy</family>
+	  <accept><family>Fantezi</family></accept>
+	</alias>
+
+
+<!-- Classify fonts. -->
+
+	<!-- Persian_title class -->
+	<alias binding="same">
+	  <family>Jadid</family>
+	  <accept><family>Persian_title</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Titr</family>
+	  <accept><family>Persian_title</family></accept>
+	</alias>
+
+	<!-- Persian_fantasy class -->
+	<alias binding="same">
+	  <family>Kamran</family>
+	  <accept>
+	  <family>Persian_fantasy</family>
+	  <family>Homa</family>
+	  </accept>
+	</alias>
+	<alias binding="same">
+	  <family>Homa</family>
+	  <accept>
+	  <family>Persian_fantasy</family>
+	  <family>Kamran</family>
+	  </accept>
+	</alias>
+	<alias binding="same">
+	  <family>Fantezi</family>
+	  <accept><family>Persian_fantasy</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Tabassom</family>
+	  <accept><family>Persian_fantasy</family></accept>
+	</alias>
+
+	<!-- Persian_square class -->
+	<alias binding="same">
+	  <family>Arshia</family>
+	  <accept><family>Persian_square</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Nasim</family>
+	  <accept><family>Persian_square</family></accept>
+	</alias>
+	<alias binding="same">
+	  <family>Elham</family>
+	  <accept>
+	  <family>Persian_square</family>
+	  <family>Farnaz</family>
+	  </accept>
+	</alias>
+	<alias binding="same">
+	  <family>Farnaz</family>
+	  <accept>
+	  <family>Persian_square</family>
+	  <family>Elham</family>
+	  </accept>
+	</alias>
+	<alias binding="same">
+	  <family>Sina</family>
+	  <accept><family>Persian_square</family></accept>
+	</alias>
+
+<!-- Font ordering per class -->
+
+	<!-- Persian_title class -->
+	<alias binding="same">
+	  <family>Persian_title</family>
+	  <accept>
+	  <family>Titr</family>
+	  <family>Jadid</family>
+	  <family>Persian_serif</family>
+	  </accept>
+	</alias>
+
+	<!-- Persian_fantasy class -->
+	<alias binding="same">
+	  <family>Persian_fantasy</family>
+	  <accept>
+	  <family>Homa</family>
+	  <family>Kamran</family>
+	  <family>Fantezi</family>
+	  <family>Tabassom</family>
+	  <family>Persian_square</family>
+	  </accept>
+	</alias>
+
+	<!-- Persian_square class -->
+	<alias binding="same">
+	  <family>Persian_square</family>
+	  <accept>
+	  <family>Arshia</family>
+	  <family>Elham</family>
+	  <family>Farnaz</family>
+	  <family>Nasim</family>
+	  <family>Sina</family>
+	  <family>Persian_serif</family>
+	  </accept>
+	</alias>
+
+<!-- Register the fonts that we actually do have -->
+
+	<match target="scan">
+		<test name="family" compare="eq" ignore-blanks="true">
+			<string>Elham</string>
+		</test>
+		<edit name="foundry">
+			<string>farsiweb</string>
+		</edit>
+	</match>
+
+	<match target="scan">
+		<test name="family" compare="eq" ignore-blanks="true">
+			<string>Homa</string>
+		</test>
+		<edit name="foundry">
+			<string>farsiweb</string>
+		</edit>
+	</match>
+
+	<match target="scan">
+		<test name="family" compare="eq" ignore-blanks="true">
+			<string>Koodak</string>
+		</test>
+		<edit name="foundry">
+			<string>farsiweb</string>
+		</edit>
+	</match>
+
+	<match target="scan">
+		<test name="family" compare="eq" ignore-blanks="true">
+			<string>Nazli</string>
+		</test>
+		<edit name="foundry">
+			<string>farsiweb</string>
+		</edit>
+	</match>
+
+	<match target="scan">
+		<test name="family" compare="eq" ignore-blanks="true">
+			<string>Roya</string>
+		</test>
+		<edit name="foundry">
+			<string>farsiweb</string>
+		</edit>
+	</match>
+
+	<match target="scan">
+		<test name="family" compare="eq" ignore-blanks="true">
+			<string>Terafik</string>
+		</test>
+		<edit name="foundry">
+			<string>farsiweb</string>
+		</edit>
+	</match>
+
+	<match target="scan">
+		<test name="family" compare="eq" ignore-blanks="true">
+			<string>Titr</string>
+		</test>
+		<edit name="foundry">
+			<string>farsiweb</string>
+		</edit>
+	</match>
+
+
+<!-- Our fonts should oblique to the other side (TURNED-OFF) -->
+
+	<match target="font">
+		<test name="foundry">
+			<!--string>farsiweb</string-->
+			<string>TURNED-OFF</string>
+		</test>
+		<test name="foundry">
+			<string>farsiweb</string>
+		</test>
+		<!-- check to see if the font is roman -->
+		<test name="slant">
+			<const>roman</const>
+		</test>
+		<!-- check to see if the pattern requested non-roman -->
+		<test target="pattern" name="slant" compare="not_eq">
+			<const>roman</const>
+		</test>
+		<!-- multiply the matrix to slant the font -->
+		<edit name="matrix" mode="assign">
+			<times>
+				<name>matrix</name>
+				<matrix><double>1</double><double>-0.2</double>
+					<double>0</double><double>1</double>
+				</matrix>
+			</times>
+		</edit>
+		<!-- pretend the font is oblique now -->
+		<edit name="slant" mode="assign">
+			<const>oblique</const>
+		</edit>
+	</match>
+
+
+<!--
+  We can't hint our fonts well, so turn off hinting.
+  Moreover, the bitmaps we have designed (well, they
+  have designed), suck, so disable them too.
+  -->
+
+	<match target="font">
+		<test name="foundry">
+			<string>farsiweb</string>
+		</test>
+		<edit name="autohint">
+			<bool>false</bool>
+		</edit>
+		<edit name="hinting">
+			<bool>false</bool>
+		</edit>
+ 		<edit name="embeddedbitmap">
+ 			<bool>false</bool>
+ 		</edit>
+	</match>
+
+
+<!-- Alias our fonts to common families -->
+
+	<!-- Persian serif fonts -->
+	<alias>
+		<family>serif</family>
+		<accept>
+			<family>Nazli</family>
+			<family>Lotoos</family>
+			<family>Mitra</family>
+			<family>Ferdosi</family>
+			<family>Badr</family>
+			<family>Zar</family>
+		</accept>
+	</alias>
+
+	<!-- Persian sans-serif fonts -->
+	<alias>
+		<family>sans-serif</family>
+		<accept>
+			<family>Roya</family>
+			<family>Koodak</family>
+			<family>Terafik</family>
+		</accept>
+	</alias>
+
+	<!-- Persian monospace fonts -->
+	<alias>
+		<family>monospace</family>
+		<accept>
+			<!-- Not really monospace -->
+			<family>Terafik</family>
+		</accept>
+	</alias>
+
+	<!-- Persian fantasy fonts -->
+	<alias>
+		<family>fantasy</family>
+		<accept>
+			<family>Homa</family>
+			<family>Kamran</family>
+			<family>Fantezi</family>
+			<family>Tabassom</family>
+		</accept>
+	</alias>
+
+	<!-- Persian (and Urdu) Nastaliq/cursive fonts -->
+	<alias>
+		<family>cursive</family>
+		<accept>
+			<family>IranNastaliq</family>
+			<family>Nafees Nastaleeq</family>
+		</accept>
+	</alias>
+
+<!-- Use Titr in titles -->
+
+	<!-- Both serif... -->
+	<match>
+		<test name="family">
+			<string>serif</string>
+		</test>
+		<test name="weight" compare="more_eq">
+			<int>200</int>
+		</test>
+		<test name="size" compare="more_eq">
+			<double>24</double>
+		</test>
+		<edit name="family" mode="prepend">
+			<string>Titr</string>
+		</edit>
+	</match>
+
+	<!-- and sans-serif. -->
+	<match>
+		<test name="family">
+			<string>sans-serif</string>
+		</test>
+		<test name="weight" compare="more_eq">
+			<int>200</int>
+		</test>
+		<test name="size" compare="more_eq">
+			<double>24</double>
+		</test>
+		<edit name="family" mode="prepend">
+			<string>Titr</string>
+		</edit>
+	</match>
+
+	<!-- and more. -->
+	<match>
+		<test name="family">
+			<string>Persian_sansserif_default</string>
+		</test>
+		<test name="weight" compare="more_eq">
+			<int>200</int>
+		</test>
+		<test name="size" compare="more_eq">
+			<double>24</double>
+		</test>
+		<edit name="family" mode="prepend" binding="same">
+			<string>Titr</string>
+		</edit>
+	</match>
+
+
+<!-- Default substituted for deprecated sans-serif fonts -->
+
+	<match>
+		<test name="family">
+			<string>Persian_sansserif_default</string>
+		</test>
+		<edit name="family" mode="assign" binding="same">
+			<string>Roya</string>
+		</edit>
+	</match>
+
+</fontconfig>
+                                                                                                            usr/share/fontconfig/conf.avail/65-khmer.conf                                                       0100644 0000000 0000000 00000000460 14324604316 017544  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+	<alias>
+		<family>serif</family>
+		<prefer>
+			<family>Khmer OS"</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans-serif</family>
+		<prefer>
+			<family>Khmer OS"</family>
+		</prefer>
+	</alias>
+</fontconfig>
+                                                                                                                                                                                                                usr/share/fontconfig/conf.avail/65-nonlatin.conf                                                    0100644 0000000 0000000 00000022113 14324604316 020257  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Set preferable fonts for non-Latin</description>
+	<alias>
+		<family>serif</family>
+		<prefer>
+			<family>Artsounk</family> <!-- armenian -->
+			<family>BPG UTF8 M</family> <!-- georgian -->
+			<family>Kinnari</family> <!-- thai -->
+			<family>Norasi</family> <!-- thai -->
+			<family>Frank Ruehl</family> <!-- hebrew -->
+			<family>Dror</family>  <!-- hebrew -->
+			<family>JG LaoTimes</family>  <!-- lao -->
+			<family>Saysettha Unicode</family>  <!-- lao -->
+			<family>Pigiarniq</family> <!-- canadian syllabics -->
+			<family>B Davat</family> <!-- arabic (fa) -->
+			<family>B Compset</family>  <!-- arabic (fa) -->
+			<family>Kacst-Qr</family> <!-- arabic (ar) -->
+			<family>Urdu Nastaliq Unicode</family> <!-- arabic (ur) -->
+			<family>Raghindi</family> <!-- devanagari -->
+			<family>Mukti Narrow</family> <!-- bengali -->
+			<family>malayalam</family> <!-- malayalam -->
+			<family>Sampige</family> <!-- kannada -->
+			<family>padmaa</family> <!-- gujarati -->
+			<family>Hapax Berbère</family> <!-- tifinagh -->
+			<family>MS Mincho</family> <!-- han (ja) -->
+			<family>SimSun</family> <!-- han (zh-cn,zh-tw) -->
+			<family>PMingLiu</family> <!-- han (zh-tw) -->
+			<family>WenQuanYi Zen Hei</family> <!-- han (zh-cn,zh-tw) -->
+			<family>WenQuanYi Bitmap Song</family> <!-- han (zh-cn,zh-tw) -->
+			<family>AR PL ShanHeiSun Uni</family> <!-- han (ja,zh-cn,zh-tw) -->
+			<family>AR PL New Sung</family> <!-- han (zh-cn,zh-tw) -->
+			<family>ZYSong18030</family> <!-- han (zh-cn,zh-tw) -->
+			<family>HanyiSong</family> <!-- han (zh-cn,zh-tw) -->
+			<family>MgOpen Canonica</family>
+			<family>Sazanami Mincho</family>
+			<family>IPAMonaMincho</family>
+			<family>IPAMincho</family>
+			<family>Kochi Mincho</family>
+			<family>AR PL SungtiL GB</family>
+			<family>AR PL Mingti2L Big5</family>
+ 			<family>AR PL Zenkai Uni</family>
+			<family>ＭＳ 明朝</family>
+ 			<family>ZYSong18030</family>
+			<family>NanumMyeongjo</family> <!-- hangul (ko) -->
+			<family>UnBatang</family> <!-- hangul (ko) -->
+			<family>Baekmuk Batang</family> <!-- hangul (ko) -->
+ 			<family>KacstQura</family>
+ 			<family>Frank Ruehl CLM</family>
+			<family>Lohit Bengali</family>
+ 			<family>Lohit Gujarati</family>
+ 			<family>Lohit Hindi</family>
+			<family>Lohit Marathi</family>
+			<family>Lohit Maithili</family>
+			<family>Lohit Kashmiri</family>
+			<family>Lohit Konkani</family>
+			<family>Lohit Nepali</family>
+			<family>Lohit Sindhi</family>
+ 			<family>Lohit Punjabi</family>
+ 			<family>Lohit Tamil</family>
+			<family>Rachana</family>
+			<family>Lohit Malayalam</family>
+ 			<family>Lohit Kannada</family>
+ 			<family>Lohit Telugu</family>
+ 			<family>Lohit Oriya</family>
+ 			<family>LKLUG</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans-serif</family>
+		<prefer>
+			<family>Nachlieli</family> <!-- hebrew -->
+			<family>Lucida Sans Unicode</family>
+			<family>Yudit Unicode</family>
+			<family>Kerkis</family> <!-- greek -->
+			<family>ArmNet Helvetica</family> <!-- armenian -->
+			<family>Artsounk</family> <!-- armenian -->
+			<family>BPG UTF8 M</family> <!-- georgian -->
+			<family>Waree</family> <!-- thai -->
+			<family>Loma</family> <!-- thai -->
+			<family>Garuda</family> <!-- thai -->
+			<family>Umpush</family> <!-- thai -->
+			<family>Saysettha Unicode</family> <!-- lao? -->
+			<family>JG Lao Old Arial</family> <!-- lao -->
+			<family>GF Zemen Unicode</family> <!-- ethiopic -->
+			<family>Pigiarniq</family> <!-- canadian syllabics -->
+			<family>B Davat</family> <!-- arabic (fa) -->
+			<family>B Compset</family> <!-- arabic (fa) -->
+			<family>Kacst-Qr</family> <!-- arabic (ar) -->
+			<family>Urdu Nastaliq Unicode</family> <!-- arabic (ur) -->
+			<family>Raghindi</family> <!-- devanagari -->
+			<family>Mukti Narrow</family> <!-- bengali -->
+			<family>malayalam</family> <!-- malayalam -->
+			<family>Sampige</family> <!-- kannada -->
+			<family>padmaa</family> <!-- gujarati -->
+			<family>Hapax Berbère</family> <!-- tifinagh -->
+			<family>MS Gothic</family> <!-- han (ja) -->
+			<family>UmePlus P Gothic</family> <!-- han (ja) -->
+			<family>Microsoft YaHei</family> <!-- han (zh-cn,zh-tw) -->
+			<family>Microsoft JhengHei</family> <!-- han (zh-tw) -->
+			<family>WenQuanYi Zen Hei</family> <!-- han (zh-cn,zh-tw) -->
+			<family>WenQuanYi Bitmap Song</family> <!-- han (zh-cn,zh-tw) -->
+			<family>AR PL ShanHeiSun Uni</family> <!--han (ja,zh-cn,zh-tw) -->
+			<family>AR PL New Sung</family> <!-- han (zh-cn,zh-tw) -->
+			<family>MgOpen Modata</family>
+			<family>VL Gothic</family>
+			<family>IPAMonaGothic</family>
+			<family>IPAGothic</family>
+			<family>Sazanami Gothic</family>
+			<family>Kochi Gothic</family>
+			<family>AR PL KaitiM GB</family>
+			<family>AR PL KaitiM Big5</family>
+ 			<family>AR PL ShanHeiSun Uni</family>
+ 			<family>AR PL SungtiL GB</family>
+ 			<family>AR PL Mingti2L Big5</family>
+			<family>ＭＳ ゴシック</family>
+			<family>ZYSong18030</family> <!-- han (zh-cn,zh-tw) -->
+			<family>TSCu_Paranar</family> <!-- tamil -->
+			<family>NanumGothic</family> <!-- hangul (ko) -->
+			<family>UnDotum</family> <!-- hangul (ko) -->
+			<family>Baekmuk Dotum</family> <!-- hangul (ko) -->
+ 			<family>Baekmuk Gulim</family> <!-- hangul (ko) -->
+ 			<family>KacstQura</family>
+			<family>Lohit Bengali</family>
+ 			<family>Lohit Gujarati</family>
+ 			<family>Lohit Hindi</family>
+			<family>Lohit Marathi</family>
+			<family>Lohit Maithili</family>
+			<family>Lohit Kashmiri</family>
+			<family>Lohit Konkani</family>
+			<family>Lohit Nepali</family>
+			<family>Lohit Sindhi</family>
+ 			<family>Lohit Punjabi</family>
+ 			<family>Lohit Tamil</family>
+			<family>Meera</family>
+ 			<family>Lohit Malayalam</family>
+ 			<family>Lohit Kannada</family>
+ 			<family>Lohit Telugu</family>
+ 			<family>Lohit Oriya</family>
+ 			<family>LKLUG</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>monospace</family>
+		<prefer>
+			<family>Miriam Mono</family> <!-- hebrew -->
+			<family>VL Gothic</family>
+			<family>IPAMonaGothic</family>
+			<family>IPAGothic</family>
+			<family>Sazanami Gothic</family>
+			<family>Kochi Gothic</family>
+			<family>AR PL KaitiM GB</family>
+			<family>MS Gothic</family> <!-- han (ja) -->
+			<family>UmePlus Gothic</family> <!-- han (ja) -->
+			<family>NSimSun</family> <!-- han (zh-cn,zh-tw) -->
+			<family>MingLiu</family> <!-- han (zh-tw) -->
+			<family>AR PL ShanHeiSun Uni</family> <!-- han (ja,zh-cn,zh-tw) -->
+			<family>AR PL New Sung Mono</family> <!-- han (zh-cn,zh-tw) -->
+			<family>HanyiSong</family> <!-- han (zh-cn) -->
+			<family>AR PL SungtiL GB</family>
+			<family>AR PL Mingti2L Big5</family>
+			<family>ZYSong18030</family> <!-- han (zh-cn,zh-tw) -->
+			<family>NanumGothicCoding</family> <!-- hangul (ko) -->
+			<family>NanumGothic</family> <!-- hangul (ko) -->
+			<family>UnDotum</family> <!-- hangul (ko) -->
+			<family>Baekmuk Dotum</family> <!-- hangul (ko) -->
+			<family>Baekmuk Gulim</family> <!-- hangul (ko) -->
+			<family>TlwgTypo</family> <!-- thai -->
+			<family>TlwgTypist</family> <!-- thai -->
+			<family>TlwgTypewriter</family> <!-- thai -->
+			<family>TlwgMono</family> <!-- thai -->
+			<family>Hasida</family> <!-- hebrew -->
+			<family>GF Zemen Unicode</family> <!-- ethiopic -->
+			<family>Hapax Berbère</family> <!-- tifinagh -->
+			<family>Lohit Bengali</family>
+			<family>Lohit Gujarati</family>
+			<family>Lohit Hindi</family>
+			<family>Lohit Marathi</family>
+			<family>Lohit Maithili</family>
+			<family>Lohit Kashmiri</family>
+			<family>Lohit Konkani</family>
+			<family>Lohit Nepali</family>
+			<family>Lohit Sindhi</family>
+			<family>Lohit Punjabi</family>
+			<family>Lohit Tamil</family>
+			<family>Meera</family>
+			<family>Lohit Malayalam</family>
+			<family>Lohit Kannada</family>
+			<family>Lohit Telugu</family>
+			<family>Lohit Oriya</family>
+			<family>LKLUG</family>
+		</prefer>
+	</alias>
+<!--
+  system-ui
+-->
+	<alias>
+		<family>system-ui</family>
+		<prefer>
+			<family>Noto Sans Arabic UI</family><!-- ar -->
+			<family>Noto Sans Bengali UI</family><!-- bn -->
+			<family>Noto Sans Devanagari UI</family><!-- hi, mai, mr -->
+			<family>Noto Sans Gujarati UI</family><!-- gu -->
+			<family>Noto Sans Gurmukhi UI</family><!-- pa -->
+			<family>Noto Sans Kannada UI</family><!-- kn -->
+			<family>Noto Sans Khmer UI</family><!-- km -->
+			<family>Noto Sans Lao UI</family><!-- lo -->
+			<family>Noto Sans Malayalam UI</family><!-- ml -->
+			<family>Noto Sans Myanmar UI</family><!-- my -->
+			<family>Noto Sans Oriya UI</family><!-- or -->
+			<family>Noto Sans Sinhala UI</family><!-- si -->
+			<family>Noto Sans Tamil UI</family><!-- ta -->
+			<family>Noto Sans Telugu UI</family><!-- te -->
+			<family>Noto Sans Thai UI</family><!-- th -->
+			<family>Leelawadee UI</family><!-- bug, th, jv, km, lo -->
+			<family>Nirmala UI</family><!-- Indic -->
+			<family>Yu Gothic UI</family><!-- han (ja) -->
+			<family>Meiryo UI</family><!-- han (ja) -->
+			<family>MS UI Gothic</family><!-- han (ja) -->
+			<family>Khmer UI</family><!-- km -->
+			<family>Lao UI</family><!-- lo -->
+			<family>Microsoft YaHei UI</family><!-- han (zh-cn) -->
+			<family>Microsoft JhengHei UI</family><!-- han (zh-tw) -->
+		</prefer>
+	</alias>
+
+</fontconfig>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     usr/share/fontconfig/conf.avail/69-unifont.conf                                                     0100644 0000000 0000000 00000001257 14324604316 020131  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+	<alias>
+		<family>serif</family>
+		<prefer>
+			<family>FreeSerif</family>
+			<family>Code2000</family>
+			<family>Code2001</family> <!-- plane1 and beyond -->
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans-serif</family>
+		<prefer>
+			<family>FreeSans</family>
+			<family>Arial Unicode MS</family>
+			<family>Arial Unicode</family>
+			<family>Code2000</family> <!-- almost everything; serif actually -->
+			<family>Code2001</family> <!-- plane1 and beyond -->
+		</prefer>
+	</alias>
+	<alias>
+		<family>monospace</family>
+		<prefer>
+			<family>FreeMono</family>
+		</prefer>
+	</alias>
+</fontconfig>
+                                                                                                                                                                                                                                                                                                                                                 usr/share/fontconfig/conf.avail/70-no-bitmaps.conf                                                  0100644 0000000 0000000 00000000507 14324604316 020505  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Reject bitmap fonts</description>
+<!-- Reject bitmap fonts -->
+ <selectfont>
+  <rejectfont>
+   <pattern>
+     <patelt name="scalable"><bool>false</bool></patelt>
+   </pattern>
+  </rejectfont>
+ </selectfont>
+</fontconfig>
+                                                                                                                                                                                         usr/share/fontconfig/conf.avail/70-yes-bitmaps.conf                                                 0100644 0000000 0000000 00000000507 14324604316 020671  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+  <description>Accept bitmap fonts</description>
+<!-- Accept bitmap fonts -->
+ <selectfont>
+  <acceptfont>
+   <pattern>
+     <patelt name="scalable"><bool>false</bool></patelt>
+   </pattern>
+  </acceptfont>
+ </selectfont>
+</fontconfig>
+                                                                                                                                                                                         usr/share/fontconfig/conf.avail/80-delicious.conf                                                   0100644 0000000 0000000 00000000665 14324604316 020422  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+<!-- Fix-ups for Delicious family -->
+
+<!-- Delicious 'heavy' variant says its Medium weight -->
+<match target="scan">
+	<test name="family" compare="eq" ignore-blanks="true">
+		<string>Delicious</string>
+	</test>
+	<test name="style">
+		<string>Heavy</string>
+	</test>
+	<edit name="weight">
+		<const>heavy</const>
+	</edit>
+</match>
+
+</fontconfig>
+                                                                           usr/share/fontconfig/conf.avail/90-synthetic.conf                                                   0100644 0000000 0000000 00000003335 14324604316 020452  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">
+<fontconfig>
+<!-- 
+ Artificial oblique for fonts without an italic or oblique version
+ -->
+ 
+	<match target="font">
+		<!-- check to see if the font is roman -->
+		<test name="slant">
+			<const>roman</const>
+		</test>
+		<!-- check to see if the pattern requested non-roman -->
+		<test target="pattern" name="slant" compare="not_eq">
+			<const>roman</const>
+		</test>
+		<!-- multiply the matrix to slant the font -->
+		<edit name="matrix" mode="assign">
+			<times>
+				<name>matrix</name>
+				<matrix><double>1</double><double>0.2</double>
+					<double>0</double><double>1</double>
+				</matrix>
+			</times>
+		</edit>
+		<!-- pretend the font is oblique now -->
+		<edit name="slant" mode="assign">
+			<const>oblique</const>
+		</edit>
+		<!-- and disable embedded bitmaps for artificial oblique -->
+		<edit name="embeddedbitmap" mode="assign">
+			<bool>false</bool>
+		</edit>
+	</match>
+
+<!--
+ Synthetic emboldening for fonts that do not have bold face available
+ -->
+
+	<match target="font">
+		<!-- check to see if the weight in the font is less than medium which possibly need emboldening -->
+		<test name="weight" compare="less_eq">
+			<const>medium</const>
+		</test>
+		<!-- check to see if the pattern requests bold -->
+		<test target="pattern" name="weight" compare="more_eq">
+			<const>bold</const>
+		</test>
+		<!--
+		  set the embolden flag
+		  needed for applications using cairo, e.g. gucharmap, gedit, ...
+		-->
+		<edit name="embolden" mode="assign">
+			<bool>true</bool>
+		</edit>
+		<!--
+		 set weight to bold
+		 needed for applications using Xft directly, e.g. Firefox, ...
+		-->
+		<edit name="weight" mode="assign">
+			<const>bold</const>
+		</edit>
+	</match>
+</fontconfig>
+                                                                                                                                                                                                                                                                                                   usr/share/licenses/                                                                                 0040755 0000000 0000000 00000000000 14371547045 013002  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-geoip/                                                              0040755 0000000 0000000 00000000000 14371547043 016507  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-geoip/.wh..wh..opq                                                  0000755 0000000 0000000 00000000000 00000000000 020413  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-geoip/COPYRIGHT                                                     0100644 0000000 0000000 00000002541 14346141553 017777  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        /* 
+ * Copyright (C) Igor Sysoev
+ * Copyright (C) Nginx, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+                                                                                                                                                               usr/share/licenses/nginx-module-image-filter/                                                       0040755 0000000 0000000 00000000000 14371547043 017751  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-image-filter/.wh..wh..opq                                           0000755 0000000 0000000 00000000000 00000000000 021655  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-image-filter/COPYRIGHT                                              0100644 0000000 0000000 00000002541 14346141572 021242  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        /* 
+ * Copyright (C) Igor Sysoev
+ * Copyright (C) Nginx, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+                                                                                                                                                               usr/share/licenses/nginx-module-njs/                                                                0040755 0000000 0000000 00000000000 14371547044 016177  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-njs/.wh..wh..opq                                                    0000755 0000000 0000000 00000000000 00000000000 020102  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-njs/COPYRIGHT                                                       0100644 0000000 0000000 00000002715 14346141610 017463  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        /*
+ * Copyright (C) 2015-2020 NGINX, Inc.
+ * Copyright (C) 2015-2020 Igor Sysoev
+ * Copyright (C) 2017-2020 Dmitry Volyntsev
+ * Copyright (C) 2019-2020 Alexander Borisov
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+                                                   usr/share/licenses/nginx-module-xslt/                                                               0040755 0000000 0000000 00000000000 14371547045 016400  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-xslt/.wh..wh..opq                                                   0000755 0000000 0000000 00000000000 00000000000 020302  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/licenses/nginx-module-xslt/COPYRIGHT                                                      0100644 0000000 0000000 00000002541 14346141763 017671  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        /* 
+ * Copyright (C) Igor Sysoev
+ * Copyright (C) Nginx, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 1. Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+ * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+ * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+ * SUCH DAMAGE.
+ */
+                                                                                                                                                               usr/share/xml/                                                                                      0040755 0000000 0000000 00000000000 14371547043 011773  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/xml/.wh..wh..opq                                                                          0000755 0000000 0000000 00000000000 00000000000 013677  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/xml/fontconfig/                                                                           0040755 0000000 0000000 00000000000 14371547043 014127  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        usr/share/xml/fontconfig/fonts.dtd                                                                  0100644 0000000 0000000 00000020076 14324604316 015752  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        <!-- This is the Document Type Definition for font configuration files -->
+<!ELEMENT fontconfig (alias |
+		      cache | 
+		      cachedir |
+		      config |
+		      description |
+		      dir |
+		      include |
+		      match |
+		      remap-dir |
+		      reset-dirs |
+		      selectfont)* >
+
+<!-- 
+    Add a directory that provides fonts
+-->
+<!ELEMENT dir (#PCDATA)>
+<!ATTLIST dir
+	  prefix    (default|xdg|relative|cwd)    "default"
+	  xml:space (default|preserve)            'preserve'>
+
+<!--
+    Define the per-user file that holds cache font information.
+
+    If the filename begins with '~', it is replaced with the users
+    home directory path.
+
+    If 'prefix' is 'default' or 'cwd', then the current working directory will be added prior to the value.
+    If 'prefix' is 'xdg', then the value in the $XDG_DATA_HOME will be added prior to the value.
+    If 'prefix' is 'relative', then the path of current file will be added prior to the value.
+-->
+<!ELEMENT cache (#PCDATA)>
+<!ATTLIST cache xml:space (default|preserve) 'preserve'>
+
+<!--
+    Add a directory that is searched for font cache files.
+    These hold per-directory cache data and are searched in
+    order for each directory. When writing cache files, the first
+    directory which allows the cache file to be created is used.
+
+    A leading '~' in a directory name is replaced with the users
+    home directory path.
+-->
+<!ELEMENT cachedir (#PCDATA)>
+<!ATTLIST cachedir
+	  prefix    CDATA      "default"
+	  xml:space (default|preserve) 'preserve'>
+
+<!--
+    Set a string as a description for the targeted config file
+
+    Set 'domain' to change where to pull translations from.
+    This will be done through gettext.
+-->
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+	  domain	CDATA	"fontconfig-conf">
+
+<!--
+    Reference another configuration file; note that this
+    is another complete font configuration file and not
+    just a file included by the XML parser.
+
+    Set 'ignore_missing' to 'yes' if errors are to be ignored.
+
+    If the filename begins with '~', it is replaced with the users
+    home directory path.
+-->
+<!ELEMENT include (#PCDATA)>
+<!ATTLIST include
+	  ignore_missing    (no|yes)		"no"
+	  prefix	    CDATA               "default"
+	  deprecated	    (yes|no)		"no"
+	  xml:space	    (default|preserve)	"preserve">
+
+<!--
+    Global library configuration data
+ -->
+<!ELEMENT config (blank|rescan)*>
+
+<!--
+    Specify the set of Unicode encoding values which
+    represent glyphs that are allowed to contain no
+    data.  With this list, fontconfig can examine
+    fonts for broken glyphs and eliminate them from
+    the set of valid Unicode chars.  This idea
+    was borrowed from Mozilla
+ -->
+<!ELEMENT blank (int|range)*>
+
+<!--
+    Aliases are just a special case for multiple match elements
+
+    They are syntactically equivalent to:
+
+    <match>
+	<test name="family">
+	    <string value=[family]/>
+	</test>
+	<edit name="family" mode="prepend">
+	    <string value=[prefer]/>
+	    ...
+	</edit>
+	<edit name="family" mode="append">
+	    <string value=[accept]/>
+	    ...
+	</edit>
+	<edit name="family" mode="append_last">
+	    <string value=[default]/>
+	    ...
+	</edit>
+    </match>
+-->
+
+<!--
+    Map a font path as the path "as-path"
+-->
+<!ELEMENT remap-dir (#PCDATA)>
+<!ATTLIST remap-dir
+          as-path   CDATA                       #REQUIRED
+          prefix    (default|xdg|relative|cwd)  "default"
+	  xml:space (default|preserve)          "preserve">
+
+<!--
+    Reset the list of fonts directories
+-->
+<!ELEMENT reset-dirs EMPTY>
+
+<!--
+    Periodically rescan the font configuration and
+    directories to synch internal state with filesystem
+ -->
+<!ELEMENT rescan (int)>
+
+<!--
+    Edit list of available fonts at startup/reload time
+ -->
+<!ELEMENT selectfont (rejectfont | acceptfont)* >
+
+<!ELEMENT rejectfont (glob | pattern)*>
+
+<!ELEMENT acceptfont (glob | pattern)*>
+
+<!ELEMENT glob (#PCDATA)>
+
+<!ELEMENT pattern (patelt)*>
+
+<!ENTITY % constant 'int|double|string|matrix|bool|charset|langset|const'>
+
+<!ELEMENT patelt (%constant;)*>
+<!ATTLIST patelt
+	  name CDATA	#REQUIRED>
+
+<!ELEMENT alias (test?, family*, prefer?, accept?, default?)>
+<!ATTLIST alias
+	  binding (weak|strong|same) "weak">
+<!ELEMENT prefer (family)*>
+<!ELEMENT accept (family)*>
+<!ELEMENT default (family)*>
+<!ELEMENT family (#PCDATA)>
+<!ATTLIST family xml:space (default|preserve) 'preserve'>
+
+<!ENTITY % expr 'int|double|string|matrix|bool|charset|langset
+		|name|const
+		|or|and|eq|not_eq|less|less_eq|more|more_eq|contains|not_contains
+		|plus|minus|times|divide|not|if|floor|ceil|round|trunc'>
+
+<!--
+    Match and edit patterns.
+
+    If 'target' is 'pattern', execute the match before selecting a font.
+    if 'target' is 'font', execute the match on the result of a font
+    selection.
+-->
+<!ELEMENT match (test|edit)+>
+<!ATTLIST match
+	  target (pattern|font|scan) "pattern">
+
+<!--
+    Match a field in a pattern
+
+    if 'qual' is 'any', then the match succeeds if any value in the field matches.
+    if 'qual' is 'all', then the match succeeds only if all values match.
+    if 'qual' is 'first', then the match succeeds only if the first value matches.
+    if 'qual' is 'not_first', then the match succeeds only if any value other than
+    	the first matches.
+    For match elements with target=font, if test 'target' is 'pattern',
+    then the test is applied to the pattern used in matching rather than
+    to the resulting font.
+
+    Match elements with target=scan are applied as fonts are scanned.
+    They edit the pattern generated from the scanned font and affect
+    what the fontconfig database contains.
+-->
+<!ELEMENT test (%expr;)*>
+<!ATTLIST test 
+	  qual (any|all|first|not_first)    "any"
+	  name CDATA	    #REQUIRED
+	  target (pattern|font|default)		"default"
+	  ignore-blanks (true|false)	"false"
+	  compare (eq|not_eq|less|less_eq|more|more_eq|contains|not_contains)	"eq">
+
+<!--
+    Edit a field in a pattern
+
+    The enclosed values are used together to edit the list of values
+    associated with 'name'.
+
+    If 'name' matches one of those used in a test element for this match element:
+	if 'mode' is 'assign', replace the matched value.
+	if 'mode' is 'assign_replace', replace all of the values
+	if 'mode' is 'prepend', insert before the matched value
+	if 'mode' is 'append', insert after the matched value
+	if 'mode' is 'prepend_first', insert before all of the values
+	if 'mode' is 'append_last', insert after all of the values
+    If 'name' doesn't match any of those used in a test element:
+	if 'mode' is 'assign' or 'assign_replace, replace all of the values
+	if 'mode' is 'prepend' or 'prepend_first', insert before all of the values
+	if 'mode' is 'append' or 'append_last', insert after all of the values
+-->
+<!ELEMENT edit (%expr;)*>
+<!ATTLIST edit
+	  name CDATA	    #REQUIRED
+	  mode (assign|assign_replace|prepend|append|prepend_first|append_last|delete|delete_all) "assign"
+	  binding (weak|strong|same) "weak">
+
+<!--
+    Elements of expressions follow
+-->
+<!ELEMENT int (#PCDATA)>
+<!ATTLIST int xml:space (default|preserve) 'preserve'>
+<!ELEMENT double (#PCDATA)>
+<!ATTLIST double xml:space (default|preserve) 'preserve'>
+<!ELEMENT string (#PCDATA)>
+<!ATTLIST string xml:space (default|preserve) 'preserve'>
+<!ELEMENT matrix ((%expr;), (%expr;), (%expr;), (%expr;))>
+<!ELEMENT bool (#PCDATA)>
+<!ELEMENT charset (int|range)*>
+<!ELEMENT range (int,int)>
+<!ELEMENT langset (string)*>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name xml:space (default|preserve) 'preserve'
+	  target (default|font|pattern) 'default'>
+<!ELEMENT const (#PCDATA)>
+<!ATTLIST const xml:space (default|preserve) 'preserve'>
+<!ELEMENT or (%expr;)*>
+<!ELEMENT and (%expr;)*>
+<!ELEMENT eq ((%expr;), (%expr;))>
+<!ELEMENT not_eq ((%expr;), (%expr;))>
+<!ELEMENT less ((%expr;), (%expr;))>
+<!ELEMENT less_eq ((%expr;), (%expr;))>
+<!ELEMENT more ((%expr;), (%expr;))>
+<!ELEMENT more_eq ((%expr;), (%expr;))>
+<!ELEMENT contains ((%expr;), (%expr;))>
+<!ELEMENT not_contains ((%expr;), (%expr;))>
+<!ELEMENT plus (%expr;)*>
+<!ELEMENT minus (%expr;)*>
+<!ELEMENT times (%expr;)*>
+<!ELEMENT divide (%expr;)*>
+<!ELEMENT not (%expr;)>
+<!ELEMENT if ((%expr;), (%expr;), (%expr;))>
+<!ELEMENT floor (%expr;)>
+<!ELEMENT ceil (%expr;)>
+<!ELEMENT round (%expr;)>
+<!ELEMENT trunc (%expr;)>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  var/                                                                                                0040755 0000000 0000000 00000000000 14371472505 010050  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        var/cache/                                                                                          0040755 0000000 0000000 00000000000 14371547043 011113  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        var/cache/fontconfig/                                                                               0040755 0000000 0000000 00000000000 14371547043 013247  5                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        var/cache/fontconfig/.wh..wh..opq                                                                   0000755 0000000 0000000 00000000000 00000000000 015153  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        c473535d7680ed64df09dc98f053dc7fbd7fc786a21046584d410d930c07a2cc.json                               0000444 0000000 0000000 00000037746 00000000000 020733  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"architecture":"arm64","config":{"Hostname":"","Domainname":"","User":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"ExposedPorts":{"80/tcp":{}},"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","NGINX_VERSION=1.23.3","PKG_RELEASE=1","NJS_VERSION=0.7.9"],"Cmd":["nginx","-g","daemon off;"],"Image":"sha256:46c92b2567e8af8acbccac3426558f8ab3b1c78f2f0dcedb7841e24448927a43","Volumes":null,"WorkingDir":"","Entrypoint":["/docker-entrypoint.sh"],"OnBuild":null,"Labels":{"maintainer":"NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"},"StopSignal":"SIGQUIT"},"container":"53eab0e40be0ecbb618b873994aab56e1f8c74b19199e55f0d2183a131f0ed14","container_config":{"Hostname":"","Domainname":"","User":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"ExposedPorts":{"80/tcp":{}},"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","NGINX_VERSION=1.23.3","PKG_RELEASE=1","NJS_VERSION=0.7.9"],"Cmd":["/bin/sh","-c","set -x     \u0026\u0026 apkArch=\"$(cat /etc/apk/arch)\"     \u0026\u0026 nginxPackages=\"         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     \"     \u0026\u0026 apk add --no-cache --virtual .checksum-deps         openssl     \u0026\u0026 case \"$apkArch\" in         x86_64|aarch64)             set -x             \u0026\u0026 KEY_SHA512=\"e09fa32f0a0eab2b879ccbbc4d0e4fb9751486eedda75e35fac65802cc9faa266425edf83e261137a2f4d16281ce2c1a5f4502930fe75154723da014214f0655\"             \u0026\u0026 wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             \u0026\u0026 if echo \"$KEY_SHA512 */tmp/nginx_signing.rsa.pub\" | sha512sum -c -; then                 echo \"key verification succeeded!\";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo \"key verification failed!\";                 exit 1;             fi             \u0026\u0026 apk add -X \"https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\\.[0-9]+' /etc/alpine-release)/main\" --no-cache $nginxPackages             ;;         *)             set -x             \u0026\u0026 tempDir=\"$(mktemp -d)\"             \u0026\u0026 chown nobody:nobody $tempDir             \u0026\u0026 apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             \u0026\u0026 su nobody -s /bin/sh -c \"                 export HOME=${tempDir}                 \u0026\u0026 cd ${tempDir}                 \u0026\u0026 curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 PKGOSSCHECKSUM=\\\"52a80f6c3b3914462f8a0b2fbadea950bcd79c1bd528386aff4c28d5a80c6920d783575a061a47b60fea800eef66bf5a0178a137ea51c37277fe9c2779715990 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\\\"                 \u0026\u0026 if [ \\\"\\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\\\" = \\\"\\$PKGOSSCHECKSUM\\\" ]; then                     echo \\\"pkg-oss tarball checksum verification succeeded!\\\";                 else                     echo \\\"pkg-oss tarball checksum verification failed!\\\";                     exit 1;                 fi                 \u0026\u0026 tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 \u0026\u0026 cd alpine                 \u0026\u0026 make module-geoip module-image-filter module-njs module-xslt                 \u0026\u0026 apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 \u0026\u0026 abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 \"             \u0026\u0026 cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             \u0026\u0026 apk del .build-deps             \u0026\u0026 apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     \u0026\u0026 apk del .checksum-deps     \u0026\u0026 if [ -n \"$tempDir\" ]; then rm -rf \"$tempDir\"; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/abuild-key.rsa.pub\" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/nginx_signing.rsa.pub\" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     \u0026\u0026 apk add --no-cache curl ca-certificates"],"Image":"sha256:46c92b2567e8af8acbccac3426558f8ab3b1c78f2f0dcedb7841e24448927a43","Volumes":null,"WorkingDir":"","Entrypoint":null,"OnBuild":null,"Labels":{"maintainer":"NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"},"StopSignal":"SIGQUIT"},"created":"2023-02-10T23:07:17.862058095Z","docker_version":"20.10.17","history":[{"created":"2023-02-10T21:24:08.680236884Z","created_by":"/bin/sh -c #(nop) ADD file:9bd9ea42a9f3bdc769e80c6b8a4b117d65f73ae68e155a6172a1184e7ac8bcc1 in / "},{"created":"2023-02-10T21:24:08.79546184Z","created_by":"/bin/sh -c #(nop)  CMD [\"/bin/sh\"]","empty_layer":true},{"created":"2023-02-10T23:06:42.174671599Z","created_by":"/bin/sh -c #(nop)  LABEL maintainer=NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e","empty_layer":true},{"created":"2023-02-10T23:06:42.249934731Z","created_by":"/bin/sh -c #(nop)  ENV NGINX_VERSION=1.23.3","empty_layer":true},{"created":"2023-02-10T23:06:42.32479411Z","created_by":"/bin/sh -c #(nop)  ENV PKG_RELEASE=1","empty_layer":true},{"created":"2023-02-10T23:06:47.310523834Z","created_by":"/bin/sh -c set -x     \u0026\u0026 addgroup -g 101 -S nginx     \u0026\u0026 adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     \u0026\u0026 apkArch=\"$(cat /etc/apk/arch)\"     \u0026\u0026 nginxPackages=\"         nginx=${NGINX_VERSION}-r${PKG_RELEASE}     \"     \u0026\u0026 apk add --no-cache --virtual .checksum-deps         openssl     \u0026\u0026 case \"$apkArch\" in         x86_64|aarch64)             set -x             \u0026\u0026 KEY_SHA512=\"e09fa32f0a0eab2b879ccbbc4d0e4fb9751486eedda75e35fac65802cc9faa266425edf83e261137a2f4d16281ce2c1a5f4502930fe75154723da014214f0655\"             \u0026\u0026 wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             \u0026\u0026 if echo \"$KEY_SHA512 */tmp/nginx_signing.rsa.pub\" | sha512sum -c -; then                 echo \"key verification succeeded!\";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo \"key verification failed!\";                 exit 1;             fi             \u0026\u0026 apk add -X \"https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\\.[0-9]+' /etc/alpine-release)/main\" --no-cache $nginxPackages             ;;         *)             set -x             \u0026\u0026 tempDir=\"$(mktemp -d)\"             \u0026\u0026 chown nobody:nobody $tempDir             \u0026\u0026 apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 bash                 alpine-sdk                 findutils             \u0026\u0026 su nobody -s /bin/sh -c \"                 export HOME=${tempDir}                 \u0026\u0026 cd ${tempDir}                 \u0026\u0026 curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 PKGOSSCHECKSUM=\\\"52a80f6c3b3914462f8a0b2fbadea950bcd79c1bd528386aff4c28d5a80c6920d783575a061a47b60fea800eef66bf5a0178a137ea51c37277fe9c2779715990 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\\\"                 \u0026\u0026 if [ \\\"\\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\\\" = \\\"\\$PKGOSSCHECKSUM\\\" ]; then                     echo \\\"pkg-oss tarball checksum verification succeeded!\\\";                 else                     echo \\\"pkg-oss tarball checksum verification failed!\\\";                     exit 1;                 fi                 \u0026\u0026 tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 \u0026\u0026 cd alpine                 \u0026\u0026 make base                 \u0026\u0026 apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 \u0026\u0026 abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 \"             \u0026\u0026 cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             \u0026\u0026 apk del .build-deps             \u0026\u0026 apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     \u0026\u0026 apk del .checksum-deps     \u0026\u0026 if [ -n \"$tempDir\" ]; then rm -rf \"$tempDir\"; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/abuild-key.rsa.pub\" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/nginx_signing.rsa.pub\" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     \u0026\u0026 apk add --no-cache --virtual .gettext gettext     \u0026\u0026 mv /usr/bin/envsubst /tmp/         \u0026\u0026 runDeps=\"$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, \"\\nso:\", $2); print \"so:\" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )\"     \u0026\u0026 apk add --no-cache $runDeps     \u0026\u0026 apk del .gettext     \u0026\u0026 mv /tmp/envsubst /usr/local/bin/     \u0026\u0026 apk add --no-cache tzdata     \u0026\u0026 ln -sf /dev/stdout /var/log/nginx/access.log     \u0026\u0026 ln -sf /dev/stderr /var/log/nginx/error.log     \u0026\u0026 mkdir /docker-entrypoint.d"},{"created":"2023-02-10T23:06:47.421156501Z","created_by":"/bin/sh -c #(nop) COPY file:7b307b62e82255f040c9812421a30090bf9abf3685f27b02d77fcca99f997911 in / "},{"created":"2023-02-10T23:06:47.503702408Z","created_by":"/bin/sh -c #(nop) COPY file:5c18272734349488bd0c94ec8d382c872c1a0a435cca13bd4671353d6021d2cb in /docker-entrypoint.d "},{"created":"2023-02-10T23:06:47.587984465Z","created_by":"/bin/sh -c #(nop) COPY file:abbcbf84dc17ee4454b6b2e3cf914be88e02cf84d344ec45a5b31235379d722a in /docker-entrypoint.d "},{"created":"2023-02-10T23:06:47.67041808Z","created_by":"/bin/sh -c #(nop) COPY file:e57eef017a414ca793499729d80a7b9075790c9a804f930f1417e56d506970cf in /docker-entrypoint.d "},{"created":"2023-02-10T23:06:47.7419801Z","created_by":"/bin/sh -c #(nop)  ENTRYPOINT [\"/docker-entrypoint.sh\"]","empty_layer":true},{"created":"2023-02-10T23:06:47.819412403Z","created_by":"/bin/sh -c #(nop)  EXPOSE 80","empty_layer":true},{"created":"2023-02-10T23:06:47.899304457Z","created_by":"/bin/sh -c #(nop)  STOPSIGNAL SIGQUIT","empty_layer":true},{"created":"2023-02-10T23:06:47.978710996Z","created_by":"/bin/sh -c #(nop)  CMD [\"nginx\" \"-g\" \"daemon off;\"]","empty_layer":true},{"created":"2023-02-10T23:07:12.349578296Z","created_by":"/bin/sh -c #(nop)  ENV NJS_VERSION=0.7.9","empty_layer":true},{"created":"2023-02-10T23:07:17.862058095Z","created_by":"/bin/sh -c set -x     \u0026\u0026 apkArch=\"$(cat /etc/apk/arch)\"     \u0026\u0026 nginxPackages=\"         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     \"     \u0026\u0026 apk add --no-cache --virtual .checksum-deps         openssl     \u0026\u0026 case \"$apkArch\" in         x86_64|aarch64)             set -x             \u0026\u0026 KEY_SHA512=\"e09fa32f0a0eab2b879ccbbc4d0e4fb9751486eedda75e35fac65802cc9faa266425edf83e261137a2f4d16281ce2c1a5f4502930fe75154723da014214f0655\"             \u0026\u0026 wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             \u0026\u0026 if echo \"$KEY_SHA512 */tmp/nginx_signing.rsa.pub\" | sha512sum -c -; then                 echo \"key verification succeeded!\";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo \"key verification failed!\";                 exit 1;             fi             \u0026\u0026 apk add -X \"https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\\.[0-9]+' /etc/alpine-release)/main\" --no-cache $nginxPackages             ;;         *)             set -x             \u0026\u0026 tempDir=\"$(mktemp -d)\"             \u0026\u0026 chown nobody:nobody $tempDir             \u0026\u0026 apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             \u0026\u0026 su nobody -s /bin/sh -c \"                 export HOME=${tempDir}                 \u0026\u0026 cd ${tempDir}                 \u0026\u0026 curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 PKGOSSCHECKSUM=\\\"52a80f6c3b3914462f8a0b2fbadea950bcd79c1bd528386aff4c28d5a80c6920d783575a061a47b60fea800eef66bf5a0178a137ea51c37277fe9c2779715990 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\\\"                 \u0026\u0026 if [ \\\"\\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\\\" = \\\"\\$PKGOSSCHECKSUM\\\" ]; then                     echo \\\"pkg-oss tarball checksum verification succeeded!\\\";                 else                     echo \\\"pkg-oss tarball checksum verification failed!\\\";                     exit 1;                 fi                 \u0026\u0026 tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 \u0026\u0026 cd alpine                 \u0026\u0026 make module-geoip module-image-filter module-njs module-xslt                 \u0026\u0026 apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 \u0026\u0026 abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 \"             \u0026\u0026 cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             \u0026\u0026 apk del .build-deps             \u0026\u0026 apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     \u0026\u0026 apk del .checksum-deps     \u0026\u0026 if [ -n \"$tempDir\" ]; then rm -rf \"$tempDir\"; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/abuild-key.rsa.pub\" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/nginx_signing.rsa.pub\" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     \u0026\u0026 apk add --no-cache curl ca-certificates"}],"os":"linux","rootfs":{"type":"layers","diff_ids":["sha256:edf70074bd40c0b1216367c29c18d453b43cc69e5123268ba66dd45d86a9e8a8","sha256:bc0dbe0c4fefb91bc00f6486b4ee890794cd8997e12ee8d241d33e530a3c5c78","sha256:b281b033c834251bed24d031527f904ead22cd34b34c7beff47c5b5476a9c5b6","sha256:5830727179433ca53a9a062fa52a2a10ac4b34a43ebb09d56d6f394db37377b3","sha256:73d220ae8858568f916a3c0112ab64e17ef35daa507105458854b3a67f4fa488","sha256:bf283905f5396694a7c858868689012712e23e741ecb9ba1118631a68d27215b","sha256:9920da5a42fa4d467e8f9a92dd5de9128d5f96ba4105c4de4e3f6eba090bd389"]},"variant":"v8"}                          28bf7309324ae43004ac3096f8c2a4eb8ef64977dcefd933bc4be8b93e945dc2/layer.tar                          0000000 0000000 0000000 00000000000 00000000000 033511  2../edf70074bd40c0b1216367c29c18d453b43cc69e5123268ba66dd45d86a9e8a8.tar                             ustar 00                                                                0000000 0000000                                                                                                                                                                        28bf7309324ae43004ac3096f8c2a4eb8ef64977dcefd933bc4be8b93e945dc2/VERSION                            0000444 0000000 0000000 00000000003 00000000000 021306  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             28bf7309324ae43004ac3096f8c2a4eb8ef64977dcefd933bc4be8b93e945dc2/json                               0000444 0000000 0000000 00000000111 00000000000 021132  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"id":"28bf7309324ae43004ac3096f8c2a4eb8ef64977dcefd933bc4be8b93e945dc2"}                                                                                                                                                                                                                                                                                                                                                                                                                                                       8d2cee18a068b67f6abf7b7f26b139108644479d600215d81d31425c902958ae/layer.tar                          0000000 0000000 0000000 00000000000 00000000000 033353  2../bc0dbe0c4fefb91bc00f6486b4ee890794cd8997e12ee8d241d33e530a3c5c78.tar                             ustar 00                                                                0000000 0000000                                                                                                                                                                        8d2cee18a068b67f6abf7b7f26b139108644479d600215d81d31425c902958ae/VERSION                            0000444 0000000 0000000 00000000003 00000000000 020556  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             8d2cee18a068b67f6abf7b7f26b139108644479d600215d81d31425c902958ae/json                               0000444 0000000 0000000 00000000225 00000000000 020410  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"id":"8d2cee18a068b67f6abf7b7f26b139108644479d600215d81d31425c902958ae","parent":"28bf7309324ae43004ac3096f8c2a4eb8ef64977dcefd933bc4be8b93e945dc2"}                                                                                                                                                                                                                                                                                                                                                                           f558e8d51d519709159f449aef991da0c22b7bfa39297ce68d6cbe3845d2abe5/layer.tar                          0000000 0000000 0000000 00000000000 00000000000 033566  2../b281b033c834251bed24d031527f904ead22cd34b34c7beff47c5b5476a9c5b6.tar                             ustar 00                                                                0000000 0000000                                                                                                                                                                        f558e8d51d519709159f449aef991da0c22b7bfa39297ce68d6cbe3845d2abe5/VERSION                            0000444 0000000 0000000 00000000003 00000000000 021247  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             f558e8d51d519709159f449aef991da0c22b7bfa39297ce68d6cbe3845d2abe5/json                               0000444 0000000 0000000 00000000225 00000000000 021101  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"id":"f558e8d51d519709159f449aef991da0c22b7bfa39297ce68d6cbe3845d2abe5","parent":"8d2cee18a068b67f6abf7b7f26b139108644479d600215d81d31425c902958ae"}                                                                                                                                                                                                                                                                                                                                                                           440017094e9f7189dc4ba09328cfc4e4ef79e962aa86f470e217b029d8b0a928/layer.tar                          0000000 0000000 0000000 00000000000 00000000000 033026  2../5830727179433ca53a9a062fa52a2a10ac4b34a43ebb09d56d6f394db37377b3.tar                             ustar 00                                                                0000000 0000000                                                                                                                                                                        440017094e9f7189dc4ba09328cfc4e4ef79e962aa86f470e217b029d8b0a928/VERSION                            0000444 0000000 0000000 00000000003 00000000000 020732  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             440017094e9f7189dc4ba09328cfc4e4ef79e962aa86f470e217b029d8b0a928/json                               0000444 0000000 0000000 00000000225 00000000000 020564  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"id":"440017094e9f7189dc4ba09328cfc4e4ef79e962aa86f470e217b029d8b0a928","parent":"f558e8d51d519709159f449aef991da0c22b7bfa39297ce68d6cbe3845d2abe5"}                                                                                                                                                                                                                                                                                                                                                                           9a46e15cd9210eb8a05752f64e7519df527a7a09f29e7dbf894f66251d859ffd/layer.tar                          0000000 0000000 0000000 00000000000 00000000000 033106  2../73d220ae8858568f916a3c0112ab64e17ef35daa507105458854b3a67f4fa488.tar                             ustar 00                                                                0000000 0000000                                                                                                                                                                        9a46e15cd9210eb8a05752f64e7519df527a7a09f29e7dbf894f66251d859ffd/VERSION                            0000444 0000000 0000000 00000000003 00000000000 021117  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             9a46e15cd9210eb8a05752f64e7519df527a7a09f29e7dbf894f66251d859ffd/json                               0000444 0000000 0000000 00000000225 00000000000 020751  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"id":"9a46e15cd9210eb8a05752f64e7519df527a7a09f29e7dbf894f66251d859ffd","parent":"440017094e9f7189dc4ba09328cfc4e4ef79e962aa86f470e217b029d8b0a928"}                                                                                                                                                                                                                                                                                                                                                                           85075259beecb78fcb261a517ba245496f2cd5d420b95176f08851ec2b003aa1/layer.tar                          0000000 0000000 0000000 00000000000 00000000000 032461  2../bf283905f5396694a7c858868689012712e23e741ecb9ba1118631a68d27215b.tar                             ustar 00                                                                0000000 0000000                                                                                                                                                                        85075259beecb78fcb261a517ba245496f2cd5d420b95176f08851ec2b003aa1/VERSION                            0000444 0000000 0000000 00000000003 00000000000 020751  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             85075259beecb78fcb261a517ba245496f2cd5d420b95176f08851ec2b003aa1/json                               0000444 0000000 0000000 00000000225 00000000000 020603  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"id":"85075259beecb78fcb261a517ba245496f2cd5d420b95176f08851ec2b003aa1","parent":"9a46e15cd9210eb8a05752f64e7519df527a7a09f29e7dbf894f66251d859ffd"}                                                                                                                                                                                                                                                                                                                                                                           9fb4caf76cd1e5ad48e7291a88cbac5ea66d79f8c2bc0731007b44d1ee956cc0/layer.tar                          0000000 0000000 0000000 00000000000 00000000000 034320  2../9920da5a42fa4d467e8f9a92dd5de9128d5f96ba4105c4de4e3f6eba090bd389.tar                             ustar 00                                                                0000000 0000000                                                                                                                                                                        9fb4caf76cd1e5ad48e7291a88cbac5ea66d79f8c2bc0731007b44d1ee956cc0/VERSION                            0000444 0000000 0000000 00000000003 00000000000 021514  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        1.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             9fb4caf76cd1e5ad48e7291a88cbac5ea66d79f8c2bc0731007b44d1ee956cc0/json                               0000444 0000000 0000000 00000012632 00000000000 021353  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"architecture":"arm64","config":{"Hostname":"","Domainname":"","User":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"ExposedPorts":{"80/tcp":{}},"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","NGINX_VERSION=1.23.3","PKG_RELEASE=1","NJS_VERSION=0.7.9"],"Cmd":["nginx","-g","daemon off;"],"Image":"sha256:46c92b2567e8af8acbccac3426558f8ab3b1c78f2f0dcedb7841e24448927a43","Volumes":null,"WorkingDir":"","Entrypoint":["/docker-entrypoint.sh"],"OnBuild":null,"Labels":{"maintainer":"NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"},"StopSignal":"SIGQUIT"},"container":"53eab0e40be0ecbb618b873994aab56e1f8c74b19199e55f0d2183a131f0ed14","container_config":{"Hostname":"","Domainname":"","User":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"ExposedPorts":{"80/tcp":{}},"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","NGINX_VERSION=1.23.3","PKG_RELEASE=1","NJS_VERSION=0.7.9"],"Cmd":["/bin/sh","-c","set -x     \u0026\u0026 apkArch=\"$(cat /etc/apk/arch)\"     \u0026\u0026 nginxPackages=\"         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     \"     \u0026\u0026 apk add --no-cache --virtual .checksum-deps         openssl     \u0026\u0026 case \"$apkArch\" in         x86_64|aarch64)             set -x             \u0026\u0026 KEY_SHA512=\"e09fa32f0a0eab2b879ccbbc4d0e4fb9751486eedda75e35fac65802cc9faa266425edf83e261137a2f4d16281ce2c1a5f4502930fe75154723da014214f0655\"             \u0026\u0026 wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             \u0026\u0026 if echo \"$KEY_SHA512 */tmp/nginx_signing.rsa.pub\" | sha512sum -c -; then                 echo \"key verification succeeded!\";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo \"key verification failed!\";                 exit 1;             fi             \u0026\u0026 apk add -X \"https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\\.[0-9]+' /etc/alpine-release)/main\" --no-cache $nginxPackages             ;;         *)             set -x             \u0026\u0026 tempDir=\"$(mktemp -d)\"             \u0026\u0026 chown nobody:nobody $tempDir             \u0026\u0026 apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             \u0026\u0026 su nobody -s /bin/sh -c \"                 export HOME=${tempDir}                 \u0026\u0026 cd ${tempDir}                 \u0026\u0026 curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 PKGOSSCHECKSUM=\\\"52a80f6c3b3914462f8a0b2fbadea950bcd79c1bd528386aff4c28d5a80c6920d783575a061a47b60fea800eef66bf5a0178a137ea51c37277fe9c2779715990 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\\\"                 \u0026\u0026 if [ \\\"\\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\\\" = \\\"\\$PKGOSSCHECKSUM\\\" ]; then                     echo \\\"pkg-oss tarball checksum verification succeeded!\\\";                 else                     echo \\\"pkg-oss tarball checksum verification failed!\\\";                     exit 1;                 fi                 \u0026\u0026 tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 \u0026\u0026 cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 \u0026\u0026 cd alpine                 \u0026\u0026 make module-geoip module-image-filter module-njs module-xslt                 \u0026\u0026 apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 \u0026\u0026 abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 \"             \u0026\u0026 cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             \u0026\u0026 apk del .build-deps             \u0026\u0026 apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     \u0026\u0026 apk del .checksum-deps     \u0026\u0026 if [ -n \"$tempDir\" ]; then rm -rf \"$tempDir\"; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/abuild-key.rsa.pub\" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     \u0026\u0026 if [ -n \"/etc/apk/keys/nginx_signing.rsa.pub\" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     \u0026\u0026 apk add --no-cache curl ca-certificates"],"Image":"sha256:46c92b2567e8af8acbccac3426558f8ab3b1c78f2f0dcedb7841e24448927a43","Volumes":null,"WorkingDir":"","Entrypoint":null,"OnBuild":null,"Labels":{"maintainer":"NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"},"StopSignal":"SIGQUIT"},"created":"2023-02-10T23:07:17.862058095Z","docker_version":"20.10.17","id":"9fb4caf76cd1e5ad48e7291a88cbac5ea66d79f8c2bc0731007b44d1ee956cc0","os":"linux","parent":"85075259beecb78fcb261a517ba245496f2cd5d420b95176f08851ec2b003aa1"}                                                                                                      manifest.json                                                                                       0000444 0000000 0000000 00000001205 00000000000 011702  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        [{"Config":"c473535d7680ed64df09dc98f053dc7fbd7fc786a21046584d410d930c07a2cc.json","RepoTags":["docker.io/library/nginx:1.23.3-alpine"],"Layers":["edf70074bd40c0b1216367c29c18d453b43cc69e5123268ba66dd45d86a9e8a8.tar","bc0dbe0c4fefb91bc00f6486b4ee890794cd8997e12ee8d241d33e530a3c5c78.tar","b281b033c834251bed24d031527f904ead22cd34b34c7beff47c5b5476a9c5b6.tar","5830727179433ca53a9a062fa52a2a10ac4b34a43ebb09d56d6f394db37377b3.tar","73d220ae8858568f916a3c0112ab64e17ef35daa507105458854b3a67f4fa488.tar","bf283905f5396694a7c858868689012712e23e741ecb9ba1118631a68d27215b.tar","9920da5a42fa4d467e8f9a92dd5de9128d5f96ba4105c4de4e3f6eba090bd389.tar"]}]                                                                                                                                                                                                                                                                                                                                                                                           repositories                                                                                        0000444 0000000 0000000 00000000160 00000000000 011652  0                                                                                                    ustar 00                                                                0000000 0000000                                                                                                                                                                        {"docker.io/library/nginx":{"1.23.3-alpine":"9fb4caf76cd1e5ad48e7291a88cbac5ea66d79f8c2bc0731007b44d1ee956cc0"}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
